@@ -342,6 +342,62 @@ section{scroll-margin-top:60px}
 .faq details[open] summary::after{transform:rotate(-135deg)}
 .faq details p{margin:0 0 1.15rem;color:var(--gris);font-size:.92rem;max-width:66ch}
 
+/* ---- statut ---- */
+.statut{
+  display:inline-block;margin:0 0 .9rem;padding:.3rem .85rem;
+  font-size:.62rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+}
+.statut--libre{border:1px solid rgba(212,160,23,.5);color:var(--or-clair)}
+.statut--reserve{border:1px solid rgba(167,156,138,.4);color:var(--gris)}
+.jeune--reserve .jeune__photos img{filter:grayscale(.75) brightness(.72)}
+
+/* ---- formulaire ---- */
+.form{
+  margin-top:2.6rem;max-width:62ch;
+  border:1px solid rgba(212,160,23,.34);
+  background:linear-gradient(180deg,rgba(212,160,23,.06),transparent);
+  padding:1.8rem 1.7rem;
+}
+.form .champ{margin-bottom:1.25rem}
+.form label{
+  display:block;margin-bottom:.45rem;
+  font-size:.66rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--or-pale);
+}
+.form input,.form select,.form textarea{
+  width:100%;padding:.72rem .85rem;
+  background:rgba(0,0,0,.4);
+  border:1px solid rgba(212,160,23,.3);
+  color:var(--creme);
+  font-family:Montserrat,sans-serif;font-size:.94rem;font-weight:300;
+  border-radius:0;
+}
+.form textarea{min-height:92px;resize:vertical;line-height:1.6}
+.form input:focus,.form select:focus,.form textarea:focus{
+  outline:none;border-color:var(--or);background:rgba(0,0,0,.55);
+}
+.form select{appearance:none;cursor:pointer}
+.form select option{background:#15120D;color:var(--creme)}
+.form .deux{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.form .aide{margin:.45rem 0 0;font-size:.78rem;color:#8A8070}
+.form button{
+  width:100%;margin-top:.5rem;padding:.95rem;cursor:pointer;
+  font-family:Montserrat,sans-serif;font-size:.78rem;font-weight:600;
+  letter-spacing:.17em;text-transform:uppercase;
+  background:var(--degrade-or);color:#1A1203;border:none;
+}
+.form button:hover{filter:brightness(1.1)}
+.form .note{margin:1.1rem 0 0;font-size:.78rem;color:#8A8070;text-align:center}
+
+.jeune__pied{display:flex;flex-wrap:wrap;align-items:center;gap:.9rem;margin-top:.4rem}
+.jeune__pied .jeune__prix{margin:0}
+.reserver-ce{
+  font-size:.68rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--or-clair);text-decoration:none;
+  border-bottom:1px solid rgba(212,160,23,.5);padding-bottom:.2rem;
+}
+.reserver-ce:hover{color:#FBEFC4}
+
 a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-offset:4px}
 </style>
 </head>
@@ -390,6 +446,7 @@ a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-
     <a href="#cohabitation">Un ou plusieurs ?</a>
     <a href="#alimentation">Alimentation</a>
     <a href="#questions">Questions</a>
+    <a href="#reserver">Réserver</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -502,9 +559,10 @@ a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-
       <div class="jeune__texte">
         <h3 class="or">Né le 16 juin 2026</h3>
         <p class="jeune__filiation">Akame × Winry</p>
+        <p class="statut statut--libre">Libre</p>
         <p>Le plus âgé des trois, et le plus posé. Il se laisse manipuler sans broncher, ce qui en fait un bon candidat pour une première expérience.</p>
         <p>Sa queue est plus courte que la moyenne. C'est une particularité esthétique, qui ne change rien à sa santé ni à son appétit.</p>
-        <p class="jeune__prix or">100 CHF</p>
+        <div class="jeune__pied"><p class="jeune__prix or">100 CHF</p><a class="reserver-ce" href="#reserver" data-gecko="Né le 16 juin 2026 — 100 CHF">Le réserver</a></div>
       </div>
       <div class="jeune__photos">
         <img src="photos/gecko1-a.jpg" alt="Jeune gecko léopard né le 16 juin 2026, vu de dessus" loading="lazy">
@@ -517,9 +575,10 @@ a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-
       <div class="jeune__texte">
         <h3 class="or">Né le 1<sup>er</sup> août 2026</h3>
         <p class="jeune__filiation">Akame × Winry</p>
+        <p class="statut statut--libre">Libre</p>
         <p>Né le jour de la fête nationale, ce qui lui vaut déjà une petite histoire à raconter.</p>
         <p>Sa robe est nettement plus claire que celle de ses frères, avec des bandes larges et bien dessinées sur un fond lavande et jaune. L'influence Snow de sa mère se voit tout de suite.</p>
-        <p class="jeune__prix or">140 CHF</p>
+        <div class="jeune__pied"><p class="jeune__prix or">140 CHF</p><a class="reserver-ce" href="#reserver" data-gecko="Né le 1er août 2026 — 140 CHF">Le réserver</a></div>
       </div>
       <div class="jeune__photos">
         <img src="photos/gecko2-a.jpg" alt="Jeune gecko léopard né le 1er août 2026, tête de face" loading="lazy">
@@ -532,9 +591,10 @@ a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-
       <div class="jeune__texte">
         <h3 class="or">Né le 18 septembre 2026</h3>
         <p class="jeune__filiation">Akame × Winry</p>
+        <p class="statut statut--libre">Libre</p>
         <p>Le benjamin, et le plus vif des trois. Il bouge beaucoup et explore sans arrêt : un tempérament qui plaira à qui aime observer un animal actif le soir.</p>
         <p>Belle queue longue et bien annelée, encore dans sa livrée de bébé.</p>
-        <p class="jeune__prix or">120 CHF</p>
+        <div class="jeune__pied"><p class="jeune__prix or">120 CHF</p><a class="reserver-ce" href="#reserver" data-gecko="Né le 18 septembre 2026 — 120 CHF">Le réserver</a></div>
       </div>
       <div class="jeune__photos">
         <img src="photos/gecko3-a.jpg" alt="Jeune gecko léopard né le 18 septembre 2026, marchant sur une main" loading="lazy">
@@ -749,6 +809,70 @@ a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-
   </div>
 </section>
 
+
+<section class="alt" id="reserver">
+  <div class="wrap">
+    <p class="surtitre">Faire une</p>
+    <h2 class="titre-2 or">Demande de réservation</h2>
+    <div class="filet"><span></span></div>
+    <p class="lisible" style="color:var(--gris)">Remplissez ce formulaire et votre demande m'arrive directement sur WhatsApp, avec tout ce dont j'ai besoin pour vous répondre précisément. Aucune donnée n'est enregistrée sur ce site.</p>
+
+    <form class="form" id="reservation">
+      <div class="deux">
+        <div class="champ">
+          <label for="r-nom">Votre nom</label>
+          <input id="r-nom" name="nom" type="text" required autocomplete="name">
+        </div>
+        <div class="champ">
+          <label for="r-lieu">Votre région</label>
+          <input id="r-lieu" name="lieu" type="text" placeholder="Bulle, Lausanne…" autocomplete="address-level2">
+        </div>
+      </div>
+
+      <div class="champ">
+        <label for="r-gecko">Quel gecko vous intéresse</label>
+        <select id="r-gecko" name="gecko" required>
+          <option value="">Choisissez…</option>
+          <option>Né le 16 juin 2026 — 100 CHF</option>
+          <option>Né le 1er août 2026 — 140 CHF</option>
+          <option>Né le 18 septembre 2026 — 120 CHF</option>
+          <option>Je ne sais pas encore, j'aimerais un conseil</option>
+        </select>
+      </div>
+
+      <div class="deux">
+        <div class="champ">
+          <label for="r-experience">Votre expérience</label>
+          <select id="r-experience" name="experience" required>
+            <option value="">Choisissez…</option>
+            <option>Ce serait mon premier reptile</option>
+            <option>J'ai déjà eu d'autres reptiles</option>
+            <option>J'ai déjà un ou plusieurs geckos léopards</option>
+          </select>
+        </div>
+        <div class="champ">
+          <label for="r-installation">Votre installation</label>
+          <select id="r-installation" name="installation" required>
+            <option value="">Choisissez…</option>
+            <option>Terrarium prêt, chauffage et thermostat installés</option>
+            <option>Terrarium acheté, installation en cours</option>
+            <option>Pas encore de matériel, je me renseigne</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="champ">
+        <label for="r-mot">Dites-moi quelques mots sur vous</label>
+        <textarea id="r-mot" name="motivation" placeholder="Pourquoi un gecko léopard, qui s'en occupera, vos questions…"></textarea>
+        <p class="aide">Ce n'est pas un examen : j'aime simplement savoir où partent mes animaux.</p>
+      </div>
+
+      <button type="submit">Envoyer ma demande sur WhatsApp</button>
+      <p class="note">WhatsApp s'ouvrira avec votre message déjà rédigé. Vous le relisez, puis vous l'envoyez.</p>
+    </form>
+  </div>
+</section>
+
 <section class="contact" id="contact">
   <div class="eclat" style="top:-14%;left:-12%;width:44%" aria-hidden="true">
     <svg viewBox="0 0 400 300"><g stroke="url(#g1)" fill="none" stroke-linecap="round">
@@ -774,5 +898,36 @@ a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-
   <div class="wrap">Company Gecko Suisse · Bulle, canton de Fribourg · Eublepharis macularius</div>
 </footer>
 
+
+<script>
+(function(){
+  var f = document.getElementById('reservation');
+  if(!f) return;
+
+  Array.prototype.forEach.call(document.querySelectorAll('.reserver-ce'), function(a){
+    a.addEventListener('click', function(){
+      var sel = document.getElementById('r-gecko'), cible = a.getAttribute('data-gecko');
+      Array.prototype.forEach.call(sel.options, function(o){ if(o.value === cible) sel.value = cible; });
+      setTimeout(function(){ var n = document.getElementById('r-nom'); if(n) n.focus({preventScroll:true}); }, 500);
+    });
+  });
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var v = function(n){ var el = f.elements[n]; return el && el.value ? el.value.trim() : ''; };
+    var l = [];
+    l.push('Bonjour, je vous écris depuis votre site pour une demande de réservation.');
+    l.push('');
+    l.push('Nom : ' + v('nom'));
+    if(v('lieu')) l.push('Région : ' + v('lieu'));
+    l.push('Gecko souhaité : ' + v('gecko'));
+    l.push('Expérience : ' + v('experience'));
+    l.push('Installation : ' + v('installation'));
+    if(v('motivation')){ l.push(''); l.push('Quelques mots : ' + v('motivation')); }
+    l.push('');
+    l.push('Merci d\'avance pour votre retour.');
+    window.open('https://wa.me/41797235033?text=' + encodeURIComponent(l.join('\n')), '_blank', 'noopener');
+  });
+})();
+</script>
 </body>
 </html>
