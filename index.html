@@ -4,25 +4,28 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Company Gecko Suisse — Élevage de geckos léopards à Bulle</title>
-<meta name="description" content="Élevage amateur de geckos léopards à Bulle, canton de Fribourg. Jeunes nés sur place, remis avec pedigree, fiche de maintenance et suivi après l'adoption.">
+<meta name="description" content="Élevage suisse de geckos léopards à Bulle, canton de Fribourg. Passion, qualité, bien-être. Jeunes nés sur place, remis avec pedigree, fiche de maintenance et suivi après l'adoption.">
 <meta property="og:title" content="Company Gecko Suisse">
-<meta property="og:description" content="Élevage de geckos léopards à Bulle, Fribourg. Pedigree et suivi avec chaque animal.">
+<meta property="og:description" content="Élevage suisse de geckos léopards à Bulle. Pedigree et suivi avec chaque animal.">
+<meta property="og:image" content="logo.png">
 <meta property="og:type" content="website">
+<meta name="theme-color" content="#0B0A08">
+<link rel="icon" href="favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
 <style>
 :root{
-  --nuit:#151B33;
-  --nuit-2:#20294A;
-  --sable:#E8DAC2;
-  --sable-clair:#F4EBDC;
-  --terre:#A8663A;
-  --terre-fonce:#6E3F23;
-  --jaune:#E0A62E;
-  --encre:#241C14;
-  --encre-doux:#564637;
-  --ligne:#CBB79A;
+  --noir:#0B0A08;
+  --noir-2:#141210;
+  --noir-3:#1C1915;
+  --or:#D4A017;
+  --or-clair:#F2D98B;
+  --or-pale:#C9B069;
+  --or-sombre:#8A6410;
+  --creme:#F3EADA;
+  --gris:#A79C8A;
+  --degrade-or:linear-gradient(170deg,#FBEFC4 2%,#E8C45C 24%,#C9971B 52%,#8E6711 74%,#F0D584 100%);
 }
 
 *{box-sizing:border-box}
@@ -31,310 +34,319 @@ html{scroll-behavior:smooth}
 
 body{
   margin:0;
-  background:var(--sable);
-  color:var(--encre);
-  font-family:Karla,system-ui,sans-serif;
-  font-size:17px;
-  line-height:1.65;
+  background:var(--noir);
+  color:var(--creme);
+  font-family:Montserrat,system-ui,sans-serif;
+  font-size:16.5px;
+  font-weight:300;
+  line-height:1.75;
   -webkit-font-smoothing:antialiased;
 }
-
-h1,h2,h3{font-family:Fraunces,Georgia,serif;font-variation-settings:"SOFT" 40,"WONK" 1;line-height:1.1;margin:0;font-weight:600}
-a{color:inherit}
 img{max-width:100%;display:block}
+a{color:inherit}
 
-.wrap{width:min(1080px,100% - 2.5rem);margin-inline:auto}
-.lisible{max-width:62ch}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+.lisible{max-width:60ch}
 
-/* ---------- HERO ---------- */
-.hero{
-  background:
-    radial-gradient(130% 80% at 50% 108%, #3C2A2E 0%, rgba(60,42,46,0) 58%),
-    linear-gradient(176deg, #0F1428 0%, var(--nuit) 42%, var(--nuit-2) 100%);
-  color:var(--sable-clair);
-  position:relative;
-  overflow:hidden;
-  padding:clamp(2.5rem,7vw,5rem) 0 0;
-}
-.hero::after{
-  content:"";position:absolute;left:0;right:0;bottom:0;height:34%;
-  background:linear-gradient(to top, var(--sable) 0 18%, rgba(232,218,194,.55) 46%, rgba(232,218,194,0) 100%);
-  pointer-events:none;
-}
-.hero .wrap{position:relative;z-index:2}
-
-.marque{
-  font-family:Fraunces,serif;
-  font-size:clamp(.95rem,1.4vw,1.05rem);
-  letter-spacing:.02em;
-  color:var(--jaune);
-  margin-bottom:clamp(2rem,7vw,3.5rem);
+/* ---- texte doré ---- */
+.or{
+  background:var(--degrade-or);
+  -webkit-background-clip:text;background-clip:text;
+  color:transparent;
 }
 
-.titre{
-  font-size:clamp(2.6rem,8.2vw,5.4rem);
-  font-weight:700;
-  letter-spacing:-.025em;
-  max-width:14ch;
-  text-wrap:balance;
-}
-.chapeau{
-  margin-top:1.4rem;
-  max-width:46ch;
-  font-size:clamp(1.02rem,1.9vw,1.2rem);
-  color:#D9CDB6;
-}
+/* ---- titres ---- */
+h1,h2,h3{margin:0;font-family:Cinzel,Georgia,serif;font-weight:600;line-height:1.2}
+.script{font-family:'Pinyon Script',cursive;font-weight:400}
 
-.actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.2rem}
-.bouton{
-  display:inline-block;
-  padding:.78rem 1.5rem;
-  background:var(--jaune);
-  color:#20160A;
-  font-weight:700;
-  text-decoration:none;
-  border-radius:2px;
-  transition:background .18s ease;
+.surtitre{
+  font-family:'Pinyon Script',cursive;
+  font-size:clamp(1.5rem,3.4vw,2.1rem);
+  color:var(--or-pale);
+  line-height:1;
+  margin-bottom:.35rem;
 }
-.bouton:hover{background:#F0BA4A}
-.bouton--ligne{background:transparent;color:var(--sable-clair);box-shadow:inset 0 0 0 1px rgba(232,218,194,.42);font-weight:500}
-.bouton--ligne:hover{background:rgba(232,218,194,.1)}
-
-.scene{
-  position:relative;z-index:1;
-  margin-top:clamp(1rem,3vw,2rem);
-  padding-bottom:clamp(2rem,6vw,4rem);
-}
-.scene svg{width:min(760px,100%);margin-inline:auto;display:block;overflow:visible}
-
-/* ---------- SECTIONS ---------- */
-section{padding:clamp(3.4rem,8vw,6rem) 0}
 .titre-2{
-  font-size:clamp(1.75rem,4vw,2.6rem);
-  letter-spacing:-.02em;
-  margin-bottom:1.6rem;
-  max-width:20ch;
-  text-wrap:balance;
+  font-size:clamp(1.6rem,3.6vw,2.4rem);
+  letter-spacing:.08em;
+  text-transform:uppercase;
 }
-.intro p + p{margin-top:1rem}
-
-.remise{
-  margin-top:2.6rem;
-  display:grid;
-  gap:1.6rem 2.6rem;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  border-top:1px solid var(--ligne);
-  padding-top:1.8rem;
+.sous-titre{
+  font-family:Montserrat,sans-serif;
+  font-size:.76rem;font-weight:500;
+  letter-spacing:.34em;text-transform:uppercase;
+  color:var(--or-pale);
+  margin:.9rem 0 0;
 }
-.remise h3{font-size:1.12rem;margin-bottom:.35rem;font-weight:600}
-.remise p{margin:0;font-size:.95rem;color:var(--encre-doux)}
 
-/* reproducteurs */
-.reproducteurs{background:var(--sable-clair)}
-.trio{display:grid;gap:1.6rem;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));margin-top:2.4rem}
+/* séparateur doré losange */
+.filet{display:flex;align-items:center;gap:.7rem;margin:1.5rem 0 2.2rem}
+.filet::before,.filet::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--or-sombre),transparent)}
+.filet span{
+  width:7px;height:7px;transform:rotate(45deg);
+  background:var(--or);box-shadow:0 0 10px rgba(212,160,23,.6);
+}
+.filet--court{justify-content:center}
+.filet--court::before,.filet--court::after{max-width:120px}
+
+/* ---- éclats lumineux ---- */
+.eclat{position:absolute;pointer-events:none;opacity:.5;mix-blend-mode:screen}
+.eclat svg{display:block}
+
+/* ---- HERO ---- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(70% 55% at 50% 38%, rgba(212,160,23,.16) 0%, rgba(212,160,23,0) 62%),
+    radial-gradient(120% 90% at 50% 120%, #241B0C 0%, var(--noir) 60%);
+  padding:clamp(2.6rem,7vw,4.4rem) 0 clamp(3rem,8vw,5rem);
+  text-align:center;
+  border-bottom:1px solid rgba(212,160,23,.28);
+}
+.hero__logo{
+  width:min(260px,52vw);height:auto;margin:0 auto clamp(1.4rem,3vw,2rem);
+  filter:drop-shadow(0 10px 36px rgba(212,160,23,.3));
+}
+.hero h1{
+  font-size:clamp(1.7rem,5.2vw,3.1rem);
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.hero .chapeau{
+  margin:1.6rem auto 0;max-width:54ch;
+  color:#CCC0AC;font-size:clamp(.95rem,1.7vw,1.05rem);
+}
+.devise{
+  margin-top:1.6rem;
+  font-size:.72rem;letter-spacing:.42em;text-transform:uppercase;
+  color:var(--or-pale);font-weight:500;
+}
+
+.actions{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center;margin-top:2.4rem}
+.bouton{
+  display:inline-block;padding:.85rem 1.9rem;
+  font-family:Montserrat,sans-serif;font-size:.78rem;font-weight:600;
+  letter-spacing:.17em;text-transform:uppercase;text-decoration:none;
+  background:var(--degrade-or);color:#1A1203;
+  border:1px solid transparent;
+  transition:filter .2s ease;
+}
+.bouton:hover{filter:brightness(1.12)}
+.bouton--ligne{
+  background:transparent;color:var(--or-clair);
+  border-color:rgba(212,160,23,.55);
+}
+.bouton--ligne:hover{background:rgba(212,160,23,.1);filter:none}
+
+/* ---- sections ---- */
+section{padding:clamp(3.4rem,8vw,5.6rem) 0;position:relative}
+.alt{background:var(--noir-2);border-block:1px solid rgba(212,160,23,.16)}
+.intro p{margin:0 0 1rem;color:#C6BAA6}
+
+/* ce qui est remis */
+.remise{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));margin-top:2.6rem}
+.remise__item{display:flex;gap:1.1rem;align-items:flex-start}
+.jeton{
+  flex:0 0 46px;width:46px;height:46px;border-radius:50%;
+  border:1px solid var(--or-sombre);
+  display:grid;place-items:center;
+  background:radial-gradient(circle at 35% 25%, rgba(212,160,23,.22), transparent 70%);
+}
+.jeton svg{width:21px;height:21px;stroke:var(--or);fill:none;stroke-width:1.5}
+.remise h3{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or-clair);margin-bottom:.35rem}
+.remise p{margin:0;font-size:.9rem;color:var(--gris);line-height:1.65}
+
+/* ---- fiches reproducteurs ---- */
+.trio{display:grid;gap:1.6rem;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));margin-top:2.6rem}
 .fiche{
   display:flex;flex-direction:column;
-  background:var(--sable);
-  border:1px solid var(--ligne);
-  padding:1.5rem 1.4rem 1.3rem;
+  background:linear-gradient(180deg,var(--noir-3),var(--noir-2));
+  border:1px solid rgba(212,160,23,.34);
+  padding:1.5rem 1.4rem 1.4rem;
+  position:relative;
+}
+.fiche::after{
+  content:"";position:absolute;inset:5px;
+  border:1px solid rgba(212,160,23,.14);pointer-events:none;
 }
 .fiche__photo{
-  aspect-ratio:3/2;object-fit:cover;
-  width:calc(100% + 2.8rem);max-width:none;
-  margin:-1.5rem -1.4rem 1.2rem;
-  border-bottom:1px solid var(--ligne);
+  aspect-ratio:3/2;object-fit:cover;width:100%;
+  border:1px solid rgba(212,160,23,.4);
+  margin-bottom:1.1rem;
 }
-.fiche__nom{font-size:1.75rem;margin-bottom:.1rem}
-.fiche__sexe{color:var(--terre);font-size:.9rem;font-weight:700}
-.fiche__morph{margin:.7rem 0 1rem;font-size:1rem}
+.fiche__nom{font-size:1.55rem;letter-spacing:.1em;text-transform:uppercase}
+.fiche__sexe{
+  margin:.35rem 0 .9rem;font-size:.68rem;font-weight:600;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--or-pale);
+}
+.fiche__morph{margin:0 0 1.2rem;font-size:.92rem;color:#CFC3AE;line-height:1.6}
 .fiche dl{
-  margin-top:auto;font-size:.88rem;color:var(--encre-doux);
-  border-top:1px solid var(--ligne);padding-top:.8rem;
-  display:grid;grid-template-columns:5.6em 1fr;gap:.3rem .7rem;
+  margin:auto 0 0;padding-top:1rem;font-size:.82rem;
+  border-top:1px solid rgba(212,160,23,.22);
+  display:grid;grid-template-columns:5.2em 1fr;gap:.4rem .8rem;
+  color:var(--gris);
 }
-.fiche dt{font-weight:700;color:var(--terre-fonce)}
+.fiche dt{font-weight:500;letter-spacing:.1em;text-transform:uppercase;font-size:.68rem;color:var(--or-pale);align-self:center}
 .fiche dd{margin:0}
 
 /* lignées */
-.lignees{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));margin-top:2.2rem}
-.lignee{border-left:3px solid var(--terre);padding:.2rem 0 .2rem 1.2rem}
-.lignee h3{font-size:1.3rem;margin-bottom:.45rem}
-.lignee p{margin:0;font-size:.96rem;color:var(--encre-doux)}
+.lignees{display:grid;gap:1.6rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:2.6rem}
+.lignee{padding-left:1.3rem;border-left:2px solid var(--or-sombre)}
+.lignee h3{font-size:1.05rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem}
+.lignee p{margin:0;font-size:.92rem;color:var(--gris)}
 
-/* disponibles */
-.disponibles{background:var(--nuit);color:var(--sable-clair)}
-.disponibles .titre-2{color:var(--sable-clair)}
-.disponibles .lisible{color:#D3C7B1}
+/* ---- jeunes ---- */
 .jeune{
-  display:grid;gap:1.4rem 2.4rem;
+  display:grid;gap:1.5rem 2.6rem;
   grid-template-columns:minmax(0,1fr);
-  padding:2.2rem 0;
-  border-top:1px solid rgba(232,218,194,.22);
+  padding:2.4rem 0;
+  border-top:1px solid rgba(212,160,23,.2);
 }
-.jeune:first-of-type{margin-top:2.2rem}
-@media (min-width:780px){
-  .jeune{grid-template-columns:minmax(0,19rem) minmax(0,1fr);align-items:start}
+.jeune:first-of-type{margin-top:2.4rem}
+@media (min-width:800px){
+  .jeune{grid-template-columns:minmax(0,19.5rem) minmax(0,1fr);align-items:start}
 }
-.jeune h3{font-size:1.5rem;color:var(--sable-clair);margin-bottom:.3rem}
-.jeune__filiation{margin:0 0 .9rem;font-size:.92rem;color:var(--jaune)}
-.jeune__texte p{color:#CFC3AD;margin:0 0 .9rem}
+.jeune h3{font-size:1.2rem;letter-spacing:.09em;text-transform:uppercase}
+.jeune__filiation{
+  margin:.4rem 0 1rem;font-size:.68rem;font-weight:600;
+  letter-spacing:.24em;text-transform:uppercase;color:var(--or-pale);
+}
+.jeune__texte p{margin:0 0 .9rem;color:var(--gris);font-size:.93rem}
 .jeune__prix{
-  display:inline-block;margin:0;padding:.3rem .8rem;
-  background:rgba(224,166,46,.16);color:var(--jaune);
-  font-weight:700;font-size:.95rem;
+  display:inline-block;margin:.3rem 0 0;padding:.45rem 1.1rem;
+  border:1px solid rgba(212,160,23,.45);
+  font-size:.82rem;font-weight:600;letter-spacing:.14em;
 }
-.jeune__photos{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem}
+.jeune__photos{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
 .jeune__photos img{
   aspect-ratio:4/5;object-fit:cover;width:100%;
-  background:var(--nuit-2);
-  border:1px solid rgba(232,218,194,.18);
+  border:1px solid rgba(212,160,23,.32);
 }
 
-/* soins */
-.soins ul{list-style:none;padding:0;margin:2.2rem 0 0;max-width:68ch}
-.soins li{padding:1.05rem 0;border-top:1px solid var(--ligne)}
-.soins li:last-child{border-bottom:1px solid var(--ligne)}
-.soins b{font-weight:700}
+/* ---- soins ---- */
+.soins ol{list-style:none;counter-reset:s;padding:0;margin:2.6rem 0 0;max-width:72ch}
+.soins li{
+  counter-increment:s;position:relative;
+  padding:1.2rem 0 1.2rem 2.2rem;
+  border-top:1px solid rgba(212,160,23,.18);
+}
+.soins li:last-child{border-bottom:1px solid rgba(212,160,23,.18)}
+.soins li::before{
+  content:"";position:absolute;left:4px;top:1.75rem;
+  width:7px;height:7px;transform:rotate(45deg);
+  background:var(--or);box-shadow:0 0 9px rgba(212,160,23,.55);
+}
+.soins b{
+  display:block;font-weight:500;color:var(--or-clair);
+  font-size:.78rem;letter-spacing:.17em;text-transform:uppercase;
+  margin-bottom:.45rem;
+}
+.soins li span{color:var(--gris);font-size:.93rem}
 
-/* contact */
-.contact{background:var(--terre-fonce);color:var(--sable-clair)}
-.contact .titre-2{color:var(--sable-clair)}
-.contact p{max-width:52ch;color:#E6D7BE}
-.liens{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2rem}
+/* ---- contact ---- */
+.contact{
+  position:relative;overflow:hidden;text-align:center;
+  background:radial-gradient(85% 120% at 50% 0%, #241B0C 0%, var(--noir) 62%);
+  border-top:1px solid rgba(212,160,23,.28);
+}
+.contact p{max-width:52ch;margin-inline:auto;color:#C6BAA6}
+.contact .actions{margin-top:2.2rem}
 
-footer{padding:2.2rem 0;font-size:.85rem;color:var(--encre-doux)}
+footer{
+  padding:2rem 0 2.6rem;text-align:center;
+  font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;
+  color:#6E6558;
+  border-top:1px solid rgba(212,160,23,.14);
+}
 
-a:focus-visible,.bouton:focus-visible{outline:3px solid var(--jaune);outline-offset:3px}
-.disponibles a:focus-visible,.contact a:focus-visible{outline-color:var(--sable-clair)}
+a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-offset:4px}
 </style>
 </head>
 <body>
 
 <header class="hero">
-  <div class="wrap">
-    <p class="marque">Company Gecko Suisse — Bulle, canton de Fribourg</p>
-    <h1 class="titre">Il sort quand le jour tombe.</h1>
-    <p class="chapeau">Élevage familial de geckos léopards. Chaque jeune part avec son pedigree sur trois générations, sa fiche de maintenance, et un éleveur qui reste joignable longtemps après.</p>
-    <div class="actions">
-      <a class="bouton" href="https://wa.me/41797235033">Écrire sur WhatsApp</a>
-      <a class="bouton bouton--ligne" href="#disponibles">Voir les jeunes</a>
-    </div>
+  <div class="eclat" style="top:-6%;left:-10%;width:46%" aria-hidden="true">
+    <svg viewBox="0 0 400 300"><g stroke="url(#g1)" fill="none" stroke-linecap="round">
+      <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#8A6410" stop-opacity="0"/>
+        <stop offset="55%" stop-color="#F2D98B"/>
+        <stop offset="100%" stop-color="#D4A017" stop-opacity="0"/></linearGradient></defs>
+      <path d="M-20 10 C 120 40 210 110 330 215" stroke-width="2.2"/>
+      <path d="M-20 60 C 110 86 190 150 300 255" stroke-width="1.1" opacity=".7"/>
+      <path d="M-10 -30 C 130 10 240 80 360 170" stroke-width="1.4" opacity=".55"/>
+    </g></svg>
   </div>
-  <div class="scene" aria-hidden="true">
-    <svg viewBox="0 0 760 330" role="img">
-      <defs>
-        <radialGradient id="halo" cx="50%" cy="86%" r="52%">
-          <stop offset="0%" stop-color="#C8783C" stop-opacity=".55"/>
-          <stop offset="100%" stop-color="#C8783C" stop-opacity="0"/>
-        </radialGradient>
-      </defs>
-      <ellipse cx="380" cy="286" rx="330" ry="54" fill="url(#halo)"/>
-      <ellipse cx="392" cy="252" rx="200" ry="13" fill="#140D14" opacity=".3"/>
-      <g>
-        <!-- queue annelée -->
-        <path d="M596 236 C 664 232 690 206 676 184 C 664 165 634 170 630 188"
-              fill="none" stroke="#F0E3CA" stroke-width="21" stroke-linecap="round"/>
-        <g fill="#241C14">
-          <ellipse cx="612" cy="235" rx="5.5" ry="10" transform="rotate(-6 612 235)"/>
-          <ellipse cx="634" cy="232" rx="5.5" ry="10" transform="rotate(-14 634 232)"/>
-          <ellipse cx="654" cy="222" rx="5.5" ry="10" transform="rotate(-34 654 222)"/>
-          <ellipse cx="668" cy="206" rx="5.5" ry="9.5" transform="rotate(-58 668 206)"/>
-          <ellipse cx="672" cy="187" rx="5" ry="9" transform="rotate(-84 672 187)"/>
-          <ellipse cx="660" cy="175" rx="4.5" ry="8" transform="rotate(-112 660 175)"/>
-        </g>
-        <!-- corps -->
-        <path d="M612 238 C 560 250 500 248 452 240 C 400 231 352 224 300 228
-                 C 252 232 214 234 186 226 C 168 221 160 210 162 198
-                 C 166 182 186 174 210 176 C 252 180 286 192 330 196
-                 C 388 201 436 194 486 198 C 540 202 586 214 612 238 Z"
-              fill="#E9C45A"/>
-        <!-- dos plus chaud -->
-        <path d="M600 232 C 548 242 496 240 450 232 C 398 223 352 217 302 221
-                 C 256 225 218 227 192 220 C 178 216 172 208 174 200
-                 C 178 190 194 185 214 187 C 254 191 288 202 332 206
-                 C 390 211 438 204 488 208 C 536 212 578 218 600 232 Z"
-              fill="#E3A93B" opacity=".55"/>
-        <!-- pattes -->
-        <g fill="#E3B449">
-          <path d="M474 234 C 484 252 498 260 516 258 C 506 250 498 240 494 230 Z"/>
-          <path d="M296 224 C 288 243 274 252 256 250 C 268 242 276 233 280 222 Z"/>
-          <path d="M456 208 C 466 192 482 186 498 190 C 486 194 478 201 474 210 Z"/>
-          <path d="M284 199 C 276 183 262 176 246 180 C 258 185 266 192 270 201 Z"/>
-        </g>
-        <g fill="#EBCA75">
-          <path d="M516 258 l 14 7 M516 258 l 15 1 M516 258 l 10 10" stroke="#EBCA75" stroke-width="4" stroke-linecap="round"/>
-          <path d="M256 250 l -14 7 M256 250 l -15 1 M256 250 l -10 10" stroke="#EBCA75" stroke-width="4" stroke-linecap="round"/>
-          <path d="M498 190 l 14 -6 M498 190 l 14 1 M498 190 l 9 -11" stroke="#EBCA75" stroke-width="4" stroke-linecap="round"/>
-          <path d="M246 180 l -14 -6 M246 180 l -14 1 M246 180 l -9 -11" stroke="#EBCA75" stroke-width="4" stroke-linecap="round"/>
-        </g>
-        <!-- tête -->
-        <path d="M194 229 C 168 236 138 231 120 216 C 107 204 108 190 121 182
-                 C 142 169 173 170 192 180 C 201 188 202 219 194 229 Z"
-              fill="#EFD79A"/>
-        <!-- oeil -->
-        <ellipse cx="156" cy="191" rx="10.5" ry="7.5" transform="rotate(-12 156 191)" fill="#1E1812"/>
-        <ellipse cx="153" cy="189" rx="2.8" ry="2.2" fill="#C9A24A"/>
-        <circle cx="123" cy="196" r="1.9" fill="#C4A268"/>
-        <!-- taches -->
-        <g fill="#241C14">
-          <ellipse cx="236" cy="206" rx="13" ry="9" transform="rotate(-10 236 206)"/>
-          <ellipse cx="276" cy="216" rx="10" ry="7" transform="rotate(6 276 216)"/>
-          <ellipse cx="312" cy="208" rx="14" ry="9" transform="rotate(-6 312 208)"/>
-          <ellipse cx="352" cy="220" rx="11" ry="7.5" transform="rotate(8 352 220)"/>
-          <ellipse cx="392" cy="210" rx="14" ry="9.5" transform="rotate(-4 392 210)"/>
-          <ellipse cx="432" cy="221" rx="10.5" ry="7" transform="rotate(10 432 221)"/>
-          <ellipse cx="470" cy="213" rx="13" ry="9" transform="rotate(-8 470 213)"/>
-          <ellipse cx="510" cy="224" rx="11" ry="7.5" transform="rotate(6 510 224)"/>
-          <ellipse cx="548" cy="219" rx="12" ry="8" transform="rotate(-4 548 219)"/>
-          <ellipse cx="582" cy="229" rx="9" ry="6" transform="rotate(12 582 229)"/>
-          <ellipse cx="256" cy="190" rx="8" ry="5.5" transform="rotate(-12 256 190)"/>
-          <ellipse cx="336" cy="196" rx="8.5" ry="5.5" transform="rotate(-6 336 196)"/>
-          <ellipse cx="416" cy="198" rx="8" ry="5" transform="rotate(-2 416 198)"/>
-          <ellipse cx="500" cy="204" rx="8" ry="5.5" transform="rotate(-6 500 204)"/>
-          <ellipse cx="180" cy="195" rx="5.5" ry="4" transform="rotate(-20 180 195)"/>
-          <ellipse cx="186" cy="214" rx="5" ry="3.6" transform="rotate(-10 186 214)"/>
-        </g>
-      </g>
-    </svg>
+  <div class="eclat" style="bottom:-8%;right:-10%;width:46%;transform:scaleX(-1) scaleY(-1)" aria-hidden="true">
+    <svg viewBox="0 0 400 300"><g stroke="url(#g1)" fill="none" stroke-linecap="round">
+      <path d="M-20 10 C 120 40 210 110 330 215" stroke-width="2.2"/>
+      <path d="M-20 60 C 110 86 190 150 300 255" stroke-width="1.1" opacity=".7"/>
+      <path d="M-10 -30 C 130 10 240 80 360 170" stroke-width="1.4" opacity=".55"/>
+    </g></svg>
+  </div>
+
+  <div class="wrap">
+    <img class="hero__logo" src="logo.png" alt="Company Gecko Suisse, élevage de geckos léopards" width="480" height="480">
+    <h1 class="or">Company Gecko Suisse</h1>
+    <p class="devise">Élevage suisse de geckos léopards</p>
+    <div class="filet filet--court"><span></span></div>
+    <p class="chapeau">Des geckos léopards nés et élevés à Bulle, en Gruyère. Chaque jeune part avec son pedigree sur trois générations, sa fiche de maintenance, et un éleveur qui reste joignable longtemps après l'adoption.</p>
+    <div class="actions">
+      <a class="bouton" href="https://wa.me/41797235033">Nous écrire</a>
+      <a class="bouton bouton--ligne" href="#disponibles">Les jeunes disponibles</a>
+    </div>
   </div>
 </header>
 
 <main>
 
-<section class="elevage">
+<section>
   <div class="wrap">
-    <h2 class="titre-2">Un petit élevage, trois reproducteurs, des papiers pour chacun</h2>
+    <p class="surtitre">Notre</p>
+    <h2 class="titre-2 or">Élevage</h2>
+    <div class="filet"><span></span></div>
+
     <div class="intro lisible">
-      <p>Company Gecko Suisse est un élevage amateur installé à Bulle. Les pontes sont suivies au jour le jour, incubées à 30 °C, et les jeunes grandissent à la maison jusqu'à ce qu'ils mangent seuls et aient le poids pour partir.</p>
-      <p>Aucun animal ne part sans ses documents. Je préfère expliquer longuement avant une adoption plutôt que de vendre vite : la plupart des problèmes rencontrés par les débutants viennent de l'installation, et ils se règlent en amont.</p>
+      <p>Company Gecko Suisse est un élevage familial installé à Bulle. Les pontes sont suivies au jour le jour, incubées à 30 °C, et les jeunes grandissent à la maison jusqu'à ce qu'ils mangent seuls et aient le poids pour partir.</p>
+      <p>Aucun animal ne quitte l'élevage sans ses documents. Je préfère expliquer longuement avant une adoption plutôt que de vendre vite : la plupart des difficultés rencontrées par les débutants viennent de l'installation, et elles se règlent en amont.</p>
     </div>
 
     <div class="remise">
-      <div>
-        <h3>Le pedigree</h3>
-        <p>Certificat nominatif qui remonte sur trois générations, avec le morph et la date de naissance de chaque ancêtre connu.</p>
+      <div class="remise__item">
+        <div class="jeton" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 12h7M9 16h5"/></svg></div>
+        <div>
+          <h3>Le pedigree</h3>
+          <p>Certificat nominatif remontant sur trois générations, avec le morph et la date de naissance de chaque ancêtre connu.</p>
+        </div>
       </div>
-      <div>
-        <h3>La fiche de maintenance</h3>
-        <p>Deux pages reprenant le terrarium, les températures, le substrat, l'alimentation par âge et les signes de bonne santé.</p>
+      <div class="remise__item">
+        <div class="jeton" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.6-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.4-7 10-7 10z"/></svg></div>
+        <div>
+          <h3>La fiche de maintenance</h3>
+          <p>Deux pages sur le terrarium, les températures, le substrat, l'alimentation par âge et les signes de bonne santé.</p>
+        </div>
       </div>
-      <div>
-        <h3>Le suivi</h3>
-        <p>Je reste joignable après l'adoption, pour une mue qui traîne, une question d'alimentation ou le sexage quelques mois plus tard.</p>
+      <div class="remise__item">
+        <div class="jeton" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div>
+          <h3>Le suivi</h3>
+          <p>Je reste joignable après l'adoption : une mue qui traîne, une question d'alimentation, ou le sexage quelques mois plus tard.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="reproducteurs">
+<section class="alt">
   <div class="wrap">
-    <h2 class="titre-2">Les reproducteurs</h2>
-    <p class="lisible">Trois animaux issus d'un élevage suisse, avec leur généalogie documentée. C'est de là que vient tout ce qui naît ici.</p>
+    <p class="surtitre">Nos</p>
+    <h2 class="titre-2 or">Reproducteurs</h2>
+    <div class="filet"><span></span></div>
+    <p class="lisible" style="color:var(--gris)">Trois animaux issus d'un élevage suisse, avec leur généalogie documentée. C'est de là que vient tout ce qui naît ici.</p>
 
     <div class="trio">
       <article class="fiche">
-        <img class="fiche__photo" src="photos/akame.jpg" alt="Akame, mâle Tangerine cross Red Stripe Bold, sur une pierre" loading="lazy">
-        <h3 class="fiche__nom">Akame</h3>
+        <img class="fiche__photo" src="photos/akame.jpg" alt="Akame, mâle Tangerine cross Red Stripe Bold" loading="lazy">
+        <h3 class="fiche__nom or">Akame</h3>
         <p class="fiche__sexe">Mâle</p>
         <p class="fiche__morph">Tangerine cross Red Stripe Bold</p>
         <dl>
@@ -345,8 +357,8 @@ a:focus-visible,.bouton:focus-visible{outline:3px solid var(--jaune);outline-off
       </article>
 
       <article class="fiche">
-        <img class="fiche__photo" src="photos/winry.jpg" alt="Winry, femelle Snow cross Black Night, vue de dessus" loading="lazy">
-        <h3 class="fiche__nom">Winry</h3>
+        <img class="fiche__photo" src="photos/winry.jpg" alt="Winry, femelle Snow cross Black Night" loading="lazy">
+        <h3 class="fiche__nom or">Winry</h3>
         <p class="fiche__sexe">Femelle</p>
         <p class="fiche__morph">Albey's Line Bred Snow cross Black Night</p>
         <dl>
@@ -357,8 +369,8 @@ a:focus-visible,.bouton:focus-visible{outline:3px solid var(--jaune);outline-off
       </article>
 
       <article class="fiche">
-        <img class="fiche__photo" src="photos/power.jpg" alt="Power, femelle Mack Super Snow Eclipse, de profil" loading="lazy">
-        <h3 class="fiche__nom">Power</h3>
+        <img class="fiche__photo" src="photos/power.jpg" alt="Power, femelle Mack Super Snow Eclipse" loading="lazy">
+        <h3 class="fiche__nom or">Power</h3>
         <p class="fiche__sexe">Femelle</p>
         <p class="fiche__morph">Mack Super Snow Eclipse</p>
         <dl>
@@ -371,44 +383,46 @@ a:focus-visible,.bouton:focus-visible{outline:3px solid var(--jaune);outline-off
 
     <div class="lignees">
       <div class="lignee">
-        <h3>Akame × Winry</h3>
+        <h3 class="or">Akame × Winry</h3>
         <p>Une lignée de couleur et de contraste : tons chauds du père, profondeur du Black Night et du Snow côté mère. Croisement entièrement polygénique, sans gène récessif caché, donc aucun het à déclarer.</p>
       </div>
       <div class="lignee">
-        <h3>Akame × Power</h3>
+        <h3 class="or">Akame × Power</h3>
         <p>La lignée la plus riche génétiquement. Power étant Super Snow, tous les petits sortent Mack Snow visible, et portent le gène Eclipse sans l'exprimer.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="disponibles" id="disponibles">
+<section id="disponibles">
   <div class="wrap">
-    <h2 class="titre-2">Les jeunes disponibles</h2>
-    <p class="lisible">Trois petits de la saison cherchent encore leur famille, tous issus d'Akame et Winry. Ils mangent seuls et ont le poids pour partir. Passez les voir sur place à Bulle : c'est toujours plus parlant que des photos.</p>
+    <p class="surtitre">Les jeunes</p>
+    <h2 class="titre-2 or">Disponibles</h2>
+    <div class="filet"><span></span></div>
+    <p class="lisible" style="color:var(--gris)">Trois petits de la saison cherchent encore leur famille, tous issus d'Akame et Winry. Ils mangent seuls et ont le poids pour partir. Passez les voir sur place à Bulle : c'est toujours plus parlant que des photos.</p>
 
     <article class="jeune">
       <div class="jeune__texte">
-        <h3>Né le 16 juin 2026</h3>
+        <h3 class="or">Né le 16 juin 2026</h3>
         <p class="jeune__filiation">Akame × Winry</p>
         <p>Le plus âgé des trois, et le plus posé. Il se laisse manipuler sans broncher, ce qui en fait un bon candidat pour une première expérience.</p>
         <p>Sa queue est plus courte que la moyenne. C'est une particularité esthétique, qui ne change rien à sa santé ni à son appétit.</p>
-        <p class="jeune__prix">100 CHF</p>
+        <p class="jeune__prix or">100 CHF</p>
       </div>
       <div class="jeune__photos">
         <img src="photos/gecko1-a.jpg" alt="Jeune gecko léopard né le 16 juin 2026, vu de dessus" loading="lazy">
-        <img src="photos/gecko1-b.jpg" alt="Le même gecko sur une main, de profil" loading="lazy">
+        <img src="photos/gecko1-b.jpg" alt="Le même gecko sur une main" loading="lazy">
         <img src="photos/gecko1-c.jpg" alt="Gros plan sur la tête du même gecko" loading="lazy">
       </div>
     </article>
 
     <article class="jeune">
       <div class="jeune__texte">
-        <h3>Né le 1<sup>er</sup> août 2026</h3>
+        <h3 class="or">Né le 1<sup>er</sup> août 2026</h3>
         <p class="jeune__filiation">Akame × Winry</p>
         <p>Né le jour de la fête nationale, ce qui lui vaut déjà une petite histoire à raconter.</p>
         <p>Sa robe est nettement plus claire que celle de ses frères, avec des bandes larges et bien dessinées sur un fond lavande et jaune. L'influence Snow de sa mère se voit tout de suite.</p>
-        <p class="jeune__prix">100 CHF</p>
+        <p class="jeune__prix or">100 CHF</p>
       </div>
       <div class="jeune__photos">
         <img src="photos/gecko2-a.jpg" alt="Jeune gecko léopard né le 1er août 2026, tête de face" loading="lazy">
@@ -419,57 +433,61 @@ a:focus-visible,.bouton:focus-visible{outline:3px solid var(--jaune);outline-off
 
     <article class="jeune">
       <div class="jeune__texte">
-        <h3>Né le 18 septembre 2026</h3>
+        <h3 class="or">Né le 18 septembre 2026</h3>
         <p class="jeune__filiation">Akame × Winry</p>
         <p>Le benjamin, et le plus vif des trois. Il bouge beaucoup et explore sans arrêt : un tempérament qui plaira à qui aime observer un animal actif le soir.</p>
         <p>Belle queue longue et bien annelée, encore dans sa livrée de bébé.</p>
-        <p class="jeune__prix">100 CHF</p>
+        <p class="jeune__prix or">100 CHF</p>
       </div>
       <div class="jeune__photos">
         <img src="photos/gecko3-a.jpg" alt="Jeune gecko léopard né le 18 septembre 2026, marchant sur une main" loading="lazy">
-        <img src="photos/gecko3-b.jpg" alt="Le même gecko vu de dessus, bandes et queue annelée" loading="lazy">
+        <img src="photos/gecko3-b.jpg" alt="Le même gecko vu de dessus" loading="lazy">
         <img src="photos/gecko3-c.jpg" alt="Le même gecko montrant sa longue queue" loading="lazy">
       </div>
     </article>
-
-    <div class="actions">
-      <a class="bouton" href="https://wa.me/41797235033">Réserver ou poser une question</a>
-    </div>
   </div>
 </section>
 
-<section class="soins">
+<section class="alt soins">
   <div class="wrap">
-    <h2 class="titre-2">Ce que je conseille, et pourquoi</h2>
-    <p class="lisible">Quelques points qui reviennent dans toutes mes conversations avec les futurs adoptants. Tout est détaillé dans la fiche remise avec l'animal.</p>
+    <p class="surtitre">Nos</p>
+    <h2 class="titre-2 or">Conseils</h2>
+    <div class="filet"><span></span></div>
+    <p class="lisible" style="color:var(--gris)">Les points qui reviennent dans toutes mes conversations avec les futurs adoptants. Tout est détaillé dans la fiche remise avec l'animal.</p>
 
-    <ul>
-      <li><b>La chaleur vient du sol, jamais du haut.</b> Un tapis chauffant sous le terrarium, relié à un thermostat, sur un tiers de la surface. C'est le ventre posé sur le point chaud qui déclenche la digestion : une lampe ne fait pas ce travail. On vise 32 à 34 °C mesurés directement à la surface du sol.</li>
-      <li><b>Pas de lampe UVB.</b> Je ne la recommande pas pour cette espèce. Ce sont le calcium et la vitamine D3 saupoudrés sur les insectes qui couvrent ses besoins, avec un multivitaminé une fois par semaine.</li>
-      <li><b>Un substrat dur, jamais meuble.</b> Du désert bedding humidifié puis séché jusqu'à devenir compact comme de la terre battue. Rien ne se détache, donc rien ne s'avale avec les proies, et le risque d'occlusion disparaît.</li>
-      <li><b>Une cachette humide en permanence.</b> Une boîte fermée garnie de sphaigne humide : c'est elle qui fait la différence entre une mue qui se passe bien et des doigts qui gardent leur peau morte.</li>
-      <li><b>Des vers de farine pour commencer.</b> Les premières semaines après le déménagement, ils passent mieux que les grillons. On introduit les grillons ensuite, ils deviennent la base. Toujours vivants, et donnés à la pince.</li>
-    </ul>
+    <ol>
+      <li><b>La chaleur vient du sol</b><span>Un tapis chauffant sous le terrarium, relié à un thermostat, sur un tiers de la surface. C'est le ventre posé sur le point chaud qui déclenche la digestion : une lampe ne fait pas ce travail. On vise 32 à 34 °C mesurés directement à la surface du sol.</span></li>
+      <li><b>Pas de lampe UVB</b><span>Je ne la recommande pas pour cette espèce. Ce sont le calcium et la vitamine D3 saupoudrés sur les insectes qui couvrent ses besoins, avec un multivitaminé une fois par semaine.</span></li>
+      <li><b>Un substrat dur, jamais meuble</b><span>Du désert bedding humidifié puis séché jusqu'à devenir compact comme de la terre battue. Rien ne se détache, donc rien ne s'avale avec les proies, et le risque d'occlusion disparaît.</span></li>
+      <li><b>Une cachette humide en permanence</b><span>Une boîte fermée garnie de sphaigne humide : c'est elle qui fait la différence entre une mue qui se passe bien et des doigts qui gardent leur peau morte.</span></li>
+      <li><b>Des vers de farine pour commencer</b><span>Les premières semaines après le déménagement, ils passent mieux que les grillons. On introduit les grillons ensuite, ils deviennent la base. Toujours vivants, et donnés à la pince.</span></li>
+    </ol>
   </div>
 </section>
 
 <section class="contact">
+  <div class="eclat" style="top:-14%;left:-12%;width:44%" aria-hidden="true">
+    <svg viewBox="0 0 400 300"><g stroke="url(#g1)" fill="none" stroke-linecap="round">
+      <path d="M-20 10 C 120 40 210 110 330 215" stroke-width="2"/>
+      <path d="M-20 60 C 110 86 190 150 300 255" stroke-width="1" opacity=".7"/>
+    </g></svg>
+  </div>
   <div class="wrap">
-    <h2 class="titre-2">Venir les voir</h2>
-    <p>Je réponds aux questions avant, pendant et après l'adoption, et je préfère largement que vous passiez rencontrer les animaux avant de vous décider. Remise en main propre à Bulle uniquement, jamais d'envoi postal.</p>
-    <div class="liens">
-      <a class="bouton" href="https://wa.me/41797235033">WhatsApp — 079 723 50 33</a>
-      <a class="bouton bouton--ligne" href="https://www.instagram.com/companygeckosuisse">Instagram</a>
+    <p class="surtitre">Venir les</p>
+    <h2 class="titre-2 or">Rencontrer</h2>
+    <div class="filet filet--court"><span></span></div>
+    <p>Je réponds aux questions avant, pendant et après l'adoption, et je préfère largement que vous passiez voir les animaux avant de vous décider. Remise en main propre à Bulle uniquement, jamais d'envoi postal.</p>
+    <div class="actions">
+      <a class="bouton" href="https://wa.me/41797235033">WhatsApp · 079 723 50 33</a>
     </div>
+    <p class="devise" style="margin-top:2.6rem">Passion · Qualité · Bien-être</p>
   </div>
 </section>
 
 </main>
 
 <footer>
-  <div class="wrap">
-    <p>Company Gecko Suisse — élevage amateur, Bulle, canton de Fribourg. Eublepharis macularius.</p>
-  </div>
+  <div class="wrap">Company Gecko Suisse · Bulle, canton de Fribourg · Eublepharis macularius</div>
 </footer>
 
 </body>
