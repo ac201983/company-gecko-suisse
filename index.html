@@ -159,14 +159,30 @@ section{padding:clamp(3.4rem,8vw,6rem) 0}
 .disponibles{background:var(--nuit);color:var(--sable-clair)}
 .disponibles .titre-2{color:var(--sable-clair)}
 .disponibles .lisible{color:#D3C7B1}
-.galerie{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));margin-top:2.4rem}
-.galerie figure{margin:0}
-.galerie img{
-  aspect-ratio:1;object-fit:cover;width:100%;
-  background:var(--nuit-2);
-  border:1px solid rgba(232,218,194,.22);
+.jeune{
+  display:grid;gap:1.4rem 2.4rem;
+  grid-template-columns:minmax(0,1fr);
+  padding:2.2rem 0;
+  border-top:1px solid rgba(232,218,194,.22);
 }
-.galerie figcaption{margin-top:.55rem;font-size:.88rem;color:#BBAE97}
+.jeune:first-of-type{margin-top:2.2rem}
+@media (min-width:780px){
+  .jeune{grid-template-columns:minmax(0,19rem) minmax(0,1fr);align-items:start}
+}
+.jeune h3{font-size:1.5rem;color:var(--sable-clair);margin-bottom:.3rem}
+.jeune__filiation{margin:0 0 .9rem;font-size:.92rem;color:var(--jaune)}
+.jeune__texte p{color:#CFC3AD;margin:0 0 .9rem}
+.jeune__prix{
+  display:inline-block;margin:0;padding:.3rem .8rem;
+  background:rgba(224,166,46,.16);color:var(--jaune);
+  font-weight:700;font-size:.95rem;
+}
+.jeune__photos{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem}
+.jeune__photos img{
+  aspect-ratio:4/5;object-fit:cover;width:100%;
+  background:var(--nuit-2);
+  border:1px solid rgba(232,218,194,.18);
+}
 
 /* soins */
 .soins ul{list-style:none;padding:0;margin:2.2rem 0 0;max-width:68ch}
@@ -359,18 +375,56 @@ a:focus-visible,.bouton:focus-visible{outline:3px solid var(--jaune);outline-off
 
 <section class="disponibles" id="disponibles">
   <div class="wrap">
-    <h2 class="titre-2">Les jeunes de la saison</h2>
-    <p class="lisible">Les petits partent une fois qu'ils mangent seuls et qu'ils ont pris assez de poids, jamais avant. Écrivez-moi pour savoir qui est encore disponible, ou passez les voir sur place à Bulle : c'est toujours plus parlant que des photos.</p>
+    <h2 class="titre-2">Les jeunes disponibles</h2>
+    <p class="lisible">Trois petits de la saison cherchent encore leur famille, tous issus d'Akame et Winry. Ils mangent seuls et ont le poids pour partir. Passez les voir sur place à Bulle : c'est toujours plus parlant que des photos.</p>
 
-    <div class="galerie">
-      <figure><img src="photos/jeune-1.jpg" alt="Jeune gecko léopard de la saison"><figcaption>Disponible</figcaption></figure>
-      <figure><img src="photos/jeune-2.jpg" alt="Jeune gecko léopard de la saison"><figcaption>Disponible</figcaption></figure>
-      <figure><img src="photos/jeune-3.jpg" alt="Jeune gecko léopard de la saison"><figcaption>Disponible</figcaption></figure>
-      <figure><img src="photos/jeune-4.jpg" alt="Jeune gecko léopard de la saison"><figcaption>Réservé</figcaption></figure>
-    </div>
+    <article class="jeune">
+      <div class="jeune__texte">
+        <h3>Né le 16 juin 2026</h3>
+        <p class="jeune__filiation">Akame × Winry</p>
+        <p>Le plus âgé des trois, et le plus posé. Il se laisse manipuler sans broncher, ce qui en fait un bon candidat pour une première expérience.</p>
+        <p>Sa queue est plus courte que la moyenne. C'est une particularité esthétique, qui ne change rien à sa santé ni à son appétit.</p>
+        <p class="jeune__prix">100 CHF</p>
+      </div>
+      <div class="jeune__photos">
+        <img src="photos/gecko1-a.jpg" alt="Jeune gecko léopard né le 16 juin 2026, vu de dessus" loading="lazy">
+        <img src="photos/gecko1-b.jpg" alt="Le même gecko sur une main, de profil" loading="lazy">
+        <img src="photos/gecko1-c.jpg" alt="Gros plan sur la tête du même gecko" loading="lazy">
+      </div>
+    </article>
+
+    <article class="jeune">
+      <div class="jeune__texte">
+        <h3>Né le 1<sup>er</sup> août 2026</h3>
+        <p class="jeune__filiation">Akame × Winry</p>
+        <p>Né le jour de la fête nationale, ce qui lui vaut déjà une petite histoire à raconter.</p>
+        <p>Sa robe est nettement plus claire que celle de ses frères, avec des bandes larges et bien dessinées sur un fond lavande et jaune. L'influence Snow de sa mère se voit tout de suite.</p>
+        <p class="jeune__prix">100 CHF</p>
+      </div>
+      <div class="jeune__photos">
+        <img src="photos/gecko2-a.jpg" alt="Jeune gecko léopard né le 1er août 2026, tête de face" loading="lazy">
+        <img src="photos/gecko2-b.jpg" alt="Le même gecko sur une main, vu de dessus" loading="lazy">
+        <img src="photos/gecko2-c.jpg" alt="Le même gecko montrant ses bandes claires" loading="lazy">
+      </div>
+    </article>
+
+    <article class="jeune">
+      <div class="jeune__texte">
+        <h3>Né le 18 septembre 2026</h3>
+        <p class="jeune__filiation">Akame × Winry</p>
+        <p>Le benjamin, et le plus vif des trois. Il bouge beaucoup et explore sans arrêt : un tempérament qui plaira à qui aime observer un animal actif le soir.</p>
+        <p>Belle queue longue et bien annelée, encore dans sa livrée de bébé.</p>
+        <p class="jeune__prix">100 CHF</p>
+      </div>
+      <div class="jeune__photos">
+        <img src="photos/gecko3-a.jpg" alt="Jeune gecko léopard né le 18 septembre 2026, marchant sur une main" loading="lazy">
+        <img src="photos/gecko3-b.jpg" alt="Le même gecko vu de dessus, bandes et queue annelée" loading="lazy">
+        <img src="photos/gecko3-c.jpg" alt="Le même gecko montrant sa longue queue" loading="lazy">
+      </div>
+    </article>
 
     <div class="actions">
-      <a class="bouton" href="https://wa.me/41797235033">Demander les disponibilités</a>
+      <a class="bouton" href="https://wa.me/41797235033">Réserver ou poser une question</a>
     </div>
   </div>
 </section>
