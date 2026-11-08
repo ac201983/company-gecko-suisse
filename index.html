@@ -104,13 +104,17 @@ h1,h2,h3{margin:0;font-family:Cinzel,Georgia,serif;font-weight:600;line-height:1
   border-bottom:1px solid rgba(212,160,23,.28);
 }
 .hero__logo{
-  width:min(260px,52vw);height:auto;margin:0 auto clamp(1.4rem,3vw,2rem);
-  filter:drop-shadow(0 10px 36px rgba(212,160,23,.3));
+  width:min(360px,74vw);height:auto;
+  margin:0 auto clamp(1.6rem,3.4vw,2.4rem);
+  filter:
+    drop-shadow(0 0 60px rgba(212,160,23,.34))
+    drop-shadow(0 18px 44px rgba(0,0,0,.6));
 }
 .hero h1{
-  font-size:clamp(1.7rem,5.2vw,3.1rem);
-  letter-spacing:.12em;
+  font-size:clamp(1.25rem,3.4vw,2.05rem);
+  letter-spacing:.14em;
   text-transform:uppercase;
+  font-weight:400;
 }
 .hero .chapeau{
   margin:1.6rem auto 0;max-width:54ch;
@@ -425,8 +429,8 @@ a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-
 
   <div class="wrap">
     <img class="hero__logo" src="logo.png" alt="Company Gecko Suisse, élevage de geckos léopards" width="480" height="480">
-    <h1 class="or">Company Gecko Suisse</h1>
-    <p class="devise">Élevage suisse de geckos léopards</p>
+    <h1 class="or">Élevage suisse de geckos léopards</h1>
+    <p class="devise">Bulle · Canton de Fribourg</p>
     <div class="filet filet--court"><span></span></div>
     <p class="chapeau">Des geckos léopards nés et élevés à Bulle, en Gruyère. Chaque jeune part avec son pedigree sur trois générations, sa fiche de maintenance, et un éleveur qui reste joignable longtemps après l'adoption.</p>
     <div class="actions">
