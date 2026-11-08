@@ -138,6 +138,12 @@ section{padding:clamp(3.4rem,8vw,6rem) 0}
   border:1px solid var(--ligne);
   padding:1.5rem 1.4rem 1.3rem;
 }
+.fiche__photo{
+  aspect-ratio:3/2;object-fit:cover;
+  width:calc(100% + 2.8rem);max-width:none;
+  margin:-1.5rem -1.4rem 1.2rem;
+  border-bottom:1px solid var(--ligne);
+}
 .fiche__nom{font-size:1.75rem;margin-bottom:.1rem}
 .fiche__sexe{color:var(--terre);font-size:.9rem;font-weight:700}
 .fiche__morph{margin:.7rem 0 1rem;font-size:1rem}
@@ -327,6 +333,7 @@ a:focus-visible,.bouton:focus-visible{outline:3px solid var(--jaune);outline-off
 
     <div class="trio">
       <article class="fiche">
+        <img class="fiche__photo" src="photos/akame.jpg" alt="Akame, mâle Tangerine cross Red Stripe Bold, sur une pierre" loading="lazy">
         <h3 class="fiche__nom">Akame</h3>
         <p class="fiche__sexe">Mâle</p>
         <p class="fiche__morph">Tangerine cross Red Stripe Bold</p>
@@ -338,6 +345,7 @@ a:focus-visible,.bouton:focus-visible{outline:3px solid var(--jaune);outline-off
       </article>
 
       <article class="fiche">
+        <img class="fiche__photo" src="photos/winry.jpg" alt="Winry, femelle Snow cross Black Night, vue de dessus" loading="lazy">
         <h3 class="fiche__nom">Winry</h3>
         <p class="fiche__sexe">Femelle</p>
         <p class="fiche__morph">Albey's Line Bred Snow cross Black Night</p>
@@ -349,6 +357,7 @@ a:focus-visible,.bouton:focus-visible{outline:3px solid var(--jaune);outline-off
       </article>
 
       <article class="fiche">
+        <img class="fiche__photo" src="photos/power.jpg" alt="Power, femelle Mack Super Snow Eclipse, de profil" loading="lazy">
         <h3 class="fiche__nom">Power</h3>
         <p class="fiche__sexe">Femelle</p>
         <p class="fiche__morph">Mack Super Snow Eclipse</p>
