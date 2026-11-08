@@ -259,6 +259,89 @@ footer{
   border-top:1px solid rgba(212,160,23,.14);
 }
 
+/* ---- navigation ---- */
+.nav{
+  position:sticky;top:0;z-index:20;
+  background:rgba(11,10,8,.93);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(212,160,23,.22);
+}
+.nav__in{
+  display:flex;gap:.2rem;align-items:center;
+  overflow-x:auto;scrollbar-width:none;
+  padding:.1rem 0;
+}
+.nav__in::-webkit-scrollbar{display:none}
+.nav a{
+  flex:0 0 auto;padding:.85rem .85rem;
+  font-size:.66rem;font-weight:500;letter-spacing:.17em;
+  text-transform:uppercase;text-decoration:none;color:var(--gris);
+  white-space:nowrap;transition:color .18s ease;
+}
+.nav a:hover{color:var(--or-clair)}
+.nav img{flex:0 0 auto;width:34px;height:34px;margin-right:.7rem}
+section{scroll-margin-top:60px}
+
+/* ---- listes de matériel ---- */
+.materiel{display:grid;gap:1.8rem 2.6rem;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));margin-top:2.4rem}
+.materiel h3{
+  font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--or-clair);margin-bottom:1rem;
+}
+.materiel ul{list-style:none;margin:0;padding:0}
+.materiel li{
+  position:relative;padding:.55rem 0 .55rem 1.5rem;
+  font-size:.92rem;color:var(--gris);
+  border-bottom:1px solid rgba(212,160,23,.12);
+}
+.materiel li::before{
+  content:"";position:absolute;left:2px;top:1.05rem;
+  width:5px;height:5px;transform:rotate(45deg);background:var(--or-sombre);
+}
+.materiel li b{color:var(--creme);font-weight:500}
+
+/* ---- encadré doré ---- */
+.encadre{
+  margin-top:2.4rem;padding:1.6rem 1.7rem;
+  border:1px solid rgba(212,160,23,.38);
+  background:linear-gradient(180deg,rgba(212,160,23,.07),transparent);
+}
+.encadre h3{
+  font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--or-clair);margin-bottom:.7rem;
+}
+.encadre p{margin:0;color:#C6BAA6;font-size:.94rem}
+.encadre p + p{margin-top:.8rem}
+
+/* ---- tableau ---- */
+.tableau{width:100%;border-collapse:collapse;margin-top:2.2rem;font-size:.88rem}
+.tableau th{
+  text-align:left;padding:.8rem .9rem;
+  font-family:Montserrat,sans-serif;font-size:.64rem;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;color:#1A1203;
+  background:var(--degrade-or);
+}
+.tableau td{padding:.8rem .9rem;border-bottom:1px solid rgba(212,160,23,.16);color:var(--gris)}
+.tableau tr td:first-child{color:var(--creme)}
+.table-wrap{overflow-x:auto}
+
+/* ---- questions ---- */
+.faq{margin-top:2.4rem;max-width:74ch}
+.faq details{border-top:1px solid rgba(212,160,23,.18)}
+.faq details:last-of-type{border-bottom:1px solid rgba(212,160,23,.18)}
+.faq summary{
+  cursor:pointer;list-style:none;padding:1.15rem 2rem 1.15rem 0;position:relative;
+  font-size:.95rem;color:var(--creme);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"";position:absolute;right:6px;top:1.5rem;
+  width:8px;height:8px;border-right:1.5px solid var(--or);border-bottom:1.5px solid var(--or);
+  transform:rotate(45deg);transition:transform .2s ease;
+}
+.faq details[open] summary::after{transform:rotate(-135deg)}
+.faq details p{margin:0 0 1.15rem;color:var(--gris);font-size:.92rem;max-width:66ch}
+
 a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-offset:4px}
 </style>
 </head>
@@ -297,9 +380,23 @@ a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-
   </div>
 </header>
 
+<nav class="nav" aria-label="Sections du site">
+  <div class="wrap nav__in">
+    <img src="logo.png" alt="" aria-hidden="true">
+    <a href="#elevage">L'élevage</a>
+    <a href="#reproducteurs">Reproducteurs</a>
+    <a href="#disponibles">Disponibles</a>
+    <a href="#installation">L'installation</a>
+    <a href="#cohabitation">Un ou plusieurs ?</a>
+    <a href="#alimentation">Alimentation</a>
+    <a href="#questions">Questions</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
 <main>
 
-<section>
+<section id="elevage">
   <div class="wrap">
     <p class="surtitre">Notre</p>
     <h2 class="titre-2 or">Élevage</h2>
@@ -336,7 +433,7 @@ a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-
   </div>
 </section>
 
-<section class="alt">
+<section class="alt" id="reproducteurs">
   <div class="wrap">
     <p class="surtitre">Nos</p>
     <h2 class="titre-2 or">Reproducteurs</h2>
@@ -448,24 +545,211 @@ a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-
   </div>
 </section>
 
-<section class="alt soins">
+<section class="alt" id="installation">
   <div class="wrap">
-    <p class="surtitre">Nos</p>
-    <h2 class="titre-2 or">Conseils</h2>
+    <p class="surtitre">Avant d'adopter</p>
+    <h2 class="titre-2 or">L'installation</h2>
     <div class="filet"><span></span></div>
-    <p class="lisible" style="color:var(--gris)">Les points qui reviennent dans toutes mes conversations avec les futurs adoptants. Tout est détaillé dans la fiche remise avec l'animal.</p>
+    <p class="lisible" style="color:var(--gris)">Tout doit être en place et stabilisé avant l'arrivée de l'animal. C'est là que se joue la réussite d'une adoption : presque toutes les difficultés que l'on me rapporte viennent d'une installation incomplète ou mal réglée.</p>
 
-    <ol>
-      <li><b>La chaleur vient du sol</b><span>Un tapis chauffant sous le terrarium, relié à un thermostat, sur un tiers de la surface. C'est le ventre posé sur le point chaud qui déclenche la digestion : une lampe ne fait pas ce travail. On vise 32 à 34 °C mesurés directement à la surface du sol.</span></li>
-      <li><b>Pas de lampe UVB</b><span>Je ne la recommande pas pour cette espèce. Ce sont le calcium et la vitamine D3 saupoudrés sur les insectes qui couvrent ses besoins, avec un multivitaminé une fois par semaine.</span></li>
-      <li><b>Un substrat dur, jamais meuble</b><span>Du désert bedding humidifié puis séché jusqu'à devenir compact comme de la terre battue. Rien ne se détache, donc rien ne s'avale avec les proies, et le risque d'occlusion disparaît.</span></li>
-      <li><b>Une cachette humide en permanence</b><span>Une boîte fermée garnie de sphaigne humide : c'est elle qui fait la différence entre une mue qui se passe bien et des doigts qui gardent leur peau morte.</span></li>
-      <li><b>Des vers de farine pour commencer</b><span>Les premières semaines après le déménagement, ils passent mieux que les grillons. On introduit les grillons ensuite, ils deviennent la base. Toujours vivants, et donnés à la pince.</span></li>
-    </ol>
+    <div class="materiel">
+      <div>
+        <h3>Indispensable</h3>
+        <ul>
+          <li><b>Un terrarium fermé et ventilé</b> — 60 × 40 cm au minimum pour un adulte</li>
+          <li><b>Un tapis chauffant</b> — placé sous le terrarium, couvrant un tiers de la surface</li>
+          <li><b>Un thermostat</b> — jamais de tapis branché sans régulation</li>
+          <li><b>Un thermomètre</b> — posé au sol, du côté chaud</li>
+          <li><b>Trois cachettes</b> — une côté chaud, une côté frais, une humide</li>
+          <li><b>De la sphaigne</b> — pour garnir la cachette humide</li>
+          <li><b>Une gamelle d'eau</b> — propre et remplie en permanence</li>
+          <li><b>Du substrat</b> — désert bedding, humidifié puis durci</li>
+          <li><b>Calcium avec vitamine D3</b> — Zoo Med Repti Calcium</li>
+          <li><b>Un multivitaminé</b> — Zoo Med Reptivite, une fois par semaine</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Vivement conseillé</h3>
+        <ul>
+          <li><b>Une pince d'alimentation</b> — pour donner les proies une à une</li>
+          <li><b>Une coupelle à bords lisses</b> — les vers de farine y restent</li>
+          <li><b>Une balance de cuisine numérique</b> — une pesée par semaine les premiers mois</li>
+          <li><b>Une lampe d'éclairage</b> — lumière du jour uniquement, jamais chauffante, éteinte la nuit</li>
+          <li><b>Un petit bac de quarantaine</b> — utile pour le démarrage d'un jeune</li>
+        </ul>
+        <h3 style="margin-top:1.8rem">Inutile chez moi</h3>
+        <ul>
+          <li><b>La lampe UVB</b> — je ne la recommande pas pour cette espèce, le calcium et la D3 couvrent ses besoins</li>
+          <li><b>La lampe chauffante seule</b> — elle chauffe par le haut, ce qui ne déclenche pas la digestion</li>
+          <li><b>Le sable meuble</b> — risque d'ingestion, et donc d'occlusion</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="encadre">
+      <h3>La taille du terrarium</h3>
+      <p>Pour un adulte, 60 × 40 cm est un minimum et 80 à 100 cm de façade est nettement plus confortable. La hauteur importe peu, le gecko léopard est terrestre : 40 cm suffisent amplement.</p>
+      <p>Pour un jeune, c'est l'inverse de ce qu'on imagine : un trop grand espace est contre-productif. Le petit peine à retrouver ses proies, son point chaud et ses cachettes, et ce stress explique une bonne partie des jeunes qui ne mangent pas. Démarrez dans un bac d'environ 30 × 20 cm, ou cloisonnez temporairement un grand terrarium pour n'en utiliser qu'un tiers. Vous ouvrirez l'espace vers cinq ou six mois.</p>
+    </div>
+
+    <div class="encadre">
+      <h3>Le chauffage, le point le plus important</h3>
+      <p>Chez le gecko léopard, la chaleur doit venir du sol. Dans la nature, il passe ses journées caché sous des pierres chauffées par le soleil, et c'est le ventre posé sur le point chaud qui déclenche sa digestion. Une lampe qui chauffe par le haut ne fait pas ce travail.</p>
+      <p>On vise 32 à 34 °C mesurés directement à la surface du sol, du côté chaud, et 24 à 26 °C du côté frais. Posez le thermomètre sur le substrat et ne vous fiez pas qu'à l'affichage du thermostat, l'écart atteint souvent deux à trois degrés. La nuit, une baisse à 20-22 °C est naturelle.</p>
+      <p>Le thermostat n'est pas une option. Les geckos perçoivent mal la chaleur venant du ventre, et c'est précisément ainsi que surviennent les brûlures ventrales, graves et lentes à guérir. Ne comptez jamais sur l'animal pour s'écarter de lui-même.</p>
+    </div>
+
+    <div class="encadre">
+      <h3>Le substrat, et comment le préparer</h3>
+      <p>J'utilise du désert bedding, mais jamais laissé meuble. Versez-le dans un seau, ajoutez beaucoup d'eau et mélangez jusqu'à obtenir une pâte épaisse, comme du ciment. Étalez dans le terrarium en tassant bien, puis laissez sécher plusieurs jours, parfois près d'une semaine.</p>
+      <p>Une fois sec, vous obtenez un sol dur et compact comme de la terre battue, où rien ne se détache sous le doigt. Le gecko ne peut plus en avaler en attrapant ses proies, ce qui écarte le risque d'occlusion intestinale. En attendant que le substrat soit prêt, l'essuie-tout est une solution parfaitement sûre.</p>
+    </div>
   </div>
 </section>
 
-<section class="contact">
+<section id="cohabitation">
+  <div class="wrap">
+    <p class="surtitre">Un ou</p>
+    <h2 class="titre-2 or">Plusieurs geckos</h2>
+    <div class="filet"><span></span></div>
+    <p class="lisible" style="color:var(--gris)">C'est la question qu'on me pose le plus souvent. Je préfère y répondre franchement, quitte à vendre un animal au lieu de deux.</p>
+
+    <div class="materiel">
+      <div>
+        <h3>Ce qu'il faut savoir</h3>
+        <ul>
+          <li><b>Le gecko léopard est solitaire.</b> Il ne s'ennuie pas seul et ne réclame aucun compagnon. Un animal seul est un animal parfaitement épanoui.</li>
+          <li><b>Jamais deux mâles ensemble.</b> Ils se battent, et les blessures peuvent être graves. C'est la seule règle absolue.</li>
+          <li><b>Un mâle et une femelle donneront des œufs.</b> La reproduction use la femelle, et il faut savoir quoi faire des petits.</li>
+          <li><b>Deux femelles, c'est possible mais jamais garanti.</b> Une dominante peut monopoliser le point chaud et la nourriture, et cela se voit parfois tard.</li>
+          <li><b>Le sexe n'est pas déterminable avant quatre à six mois.</b> Prendre deux jeunes aujourd'hui revient donc à tirer au sort.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Si vous en voulez deux quand même</h3>
+        <ul>
+          <li><b>Prévoyez un terrarium nettement plus grand</b> — 100 cm de façade au minimum</li>
+          <li><b>Doublez les cachettes</b> — deux chaudes, deux fraîches, deux humides, pour que chacun ait les siennes</li>
+          <li><b>Nourrissez à la pince</b>, à l'un puis à l'autre, ou en mettant largement de quoi manger pour les deux</li>
+          <li><b>Pesez-les séparément chaque semaine</b> — un écart qui se creuse est le premier signe d'un problème</li>
+          <li><b>Gardez un second terrarium disponible</b> — il faudra peut-être les séparer vers six mois</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="encadre">
+      <h3>Ma recommandation</h3>
+      <p>Commencez avec un seul. Vous apprendrez à le connaître, vous maîtriserez votre installation, et vous verrez si la passion s'installe. Dans quelques mois, une fois son sexe confirmé, vous pourrez envisager un second animal compatible en toute connaissance de cause.</p>
+      <p>Si vous souhaitez malgré tout en prendre deux maintenant, je vous les remets volontiers, mais en vous ayant dit clairement ce que cela implique.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="alimentation">
+  <div class="wrap">
+    <p class="surtitre">Son</p>
+    <h2 class="titre-2 or">Alimentation</h2>
+    <div class="filet"><span></span></div>
+    <p class="lisible" style="color:var(--gris)">Insectivore strict, et uniquement des insectes vivants. Une règle de taille à retenir : jamais plus larges que l'espace entre ses yeux.</p>
+
+    <div class="table-wrap">
+      <table class="tableau">
+        <thead><tr><th>Âge</th><th>Fréquence</th><th>Quantité par repas</th></tr></thead>
+        <tbody>
+          <tr><td>Bébé, 0 à 3 mois</td><td>Tous les jours</td><td>2 à 4 proies</td></tr>
+          <tr><td>Juvénile, 3 à 6 mois</td><td>Tous les jours à un jour sur deux</td><td>4 à 6 proies</td></tr>
+          <tr><td>Sub-adulte, 6 à 12 mois</td><td>Un jour sur deux</td><td>5 à 7 proies</td></tr>
+          <tr><td>Adulte, dès 12 mois</td><td>Deux à trois fois par semaine</td><td>6 à 8 proies</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="materiel">
+      <div>
+        <h3>Comment je procède</h3>
+        <ul>
+          <li><b>Les vers de farine d'abord.</b> Les premières semaines après le déménagement, ils passent mieux que les grillons : ils bougent moins et sont bien plus appétents.</li>
+          <li><b>Les grillons ensuite,</b> introduits progressivement. Ils deviennent la base de l'alimentation, les vers de farine redevenant une gâterie.</li>
+          <li><b>Toujours à la pince,</b> surtout au début. Les proies ne se sauvent pas dans le terrarium et vous voyez exactement ce qui est mangé.</li>
+          <li><b>Le soir, à la tombée du jour.</b> Le matin, il n'a aucun appétit : c'est un animal crépusculaire.</li>
+          <li><b>Dix à quinze minutes,</b> puis on retire les grillons non consommés.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Les compléments</h3>
+        <ul>
+          <li><b>Calcium avec D3</b> — Zoo Med Repti Calcium, saupoudré légèrement sur les insectes à presque chaque repas</li>
+          <li><b>Multivitaminé</b> — Zoo Med Reptivite, une fois par semaine, en remplacement du calcium ce jour-là</li>
+          <li><b>Pourquoi c'est essentiel</b> — comme je ne recommande pas de lampe UVB, c'est ce complément qui assure la bonne fixation du calcium</li>
+          <li><b>Deux produits suffisent</b> — inutile d'en cumuler davantage</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="questions">
+  <div class="wrap">
+    <p class="surtitre">Vos</p>
+    <h2 class="titre-2 or">Questions</h2>
+    <div class="filet"><span></span></div>
+    <p class="lisible" style="color:var(--gris)">Celles qui reviennent le plus souvent. Si la vôtre n'y est pas, écrivez-moi.</p>
+
+    <div class="faq">
+      <details>
+        <summary>Combien de temps vit un gecko léopard ?</summary>
+        <p>Entre quinze et vingt ans, parfois davantage. C'est un engagement sur le long terme, au même titre qu'un chien ou un chat, et c'est un point auquel je tiens avant chaque adoption.</p>
+      </details>
+      <details>
+        <summary>Est-ce qu'il mord ?</summary>
+        <p>C'est extrêmement rare, et sans gravité. Un gecko léopard bien manipulé ne cherche jamais à mordre. Au pire, un jeune peut confondre un doigt avec une proie, ce qui surprend plus que ça ne fait mal.</p>
+      </details>
+      <details>
+        <summary>Peut-on le manipuler ?</summary>
+        <p>Oui, et c'est l'un des grands avantages de l'espèce. Laissez-le s'acclimater quelques jours après son arrivée, puis commencez par de courtes séances que vous allongerez progressivement. La plupart deviennent très dociles et viennent d'eux-mêmes dans la main. On ne l'attrape jamais par la queue, qui peut se détacher.</p>
+      </details>
+      <details>
+        <summary>Est-ce un bon premier reptile ?</summary>
+        <p>C'est l'un des meilleurs. Il reste petit, son installation est simple une fois bien réglée, il mange des insectes et rien d'autre, et il se manipule facilement. Le gecko à crête est son principal concurrent pour un débutant : il vit à température ambiante et accepte des préparations en poudre, mais il grimpe, il saute, et sa queue ne repousse jamais.</p>
+      </details>
+      <details>
+        <summary>Quand connaîtra-t-on son sexe ?</summary>
+        <p>Pas avant quatre à six mois, de façon fiable. Je ne m'avance jamais sur le sexe d'un jeune que je remets, et je reste disponible pour vous aider à le déterminer le moment venu.</p>
+      </details>
+      <details>
+        <summary>Il ne mange pas depuis son arrivée, dois-je m'inquiéter ?</summary>
+        <p>C'est fréquent et presque toujours passager. Un jeune met souvent dix jours à trois semaines à prendre ses marques dans un nouvel environnement. Vérifiez d'abord la température au sol du côté chaud : trop basse, il ne digère pas et coupe son appétit, c'est de loin la cause la plus fréquente. Proposez des vers de farine plutôt que des grillons, le soir, et laissez-le tranquille.</p>
+        <p>Le vrai indicateur, c'est sa queue : tant qu'elle reste au moins aussi large que son cou, il a ses réserves et vous avez du temps devant vous. Si elle s'affine, si les selles disparaissent ou s'il devient léthargique, consultez un vétérinaire spécialisé NAC.</p>
+      </details>
+      <details>
+        <summary>À quoi ressemblent des selles normales ?</summary>
+        <p>Brun foncé, avec une petite partie blanche collée au bout, comme chez les oiseaux. Comptez-en tous les deux à trois jours, souvent toujours au même coin du terrarium. Une absence prolongée de selles chez un animal qui mange mérite qu'on s'y arrête.</p>
+      </details>
+      <details>
+        <summary>Il a perdu sa queue, que faire ?</summary>
+        <p>Elle repousse. La nouvelle sera plus courte, plus trapue et moins bien dessinée, mais sans aucune conséquence sur sa santé ni sur son espérance de vie. Gardez l'installation très propre pendant la cicatrisation.</p>
+      </details>
+      <details>
+        <summary>Comment se passe la mue ?</summary>
+        <p>Régulièrement, et la cachette humide fait toute la différence. Vérifiez qu'il ne reste pas de peau morte sur les doigts ou le bout de la queue : accumulée, elle peut faire garrot. Si c'est le cas, un bain tiède peu profond de quelques minutes suffit généralement à la décoller.</p>
+      </details>
+      <details>
+        <summary>Et pendant les vacances ?</summary>
+        <p>Un adulte en bonne santé supporte sans problème quelques jours seul, avec de l'eau propre à disposition et son chauffage qui tourne. Au-delà d'une semaine, prévoyez quelqu'un pour le nourrir et changer l'eau. Un jeune, lui, demande un passage quotidien.</p>
+      </details>
+      <details>
+        <summary>Faut-il faire hiberner le gecko ?</summary>
+        <p>Jamais un juvénile : la première année, il doit grandir et constituer ses réserves. La brumation, une légère baisse hivernale, ne concerne éventuellement que des adultes bien portants à partir de dix-huit mois, et surtout en vue d'une reproduction. Elle n'est pas obligatoire.</p>
+      </details>
+      <details>
+        <summary>Comment se passe la remise de l'animal ?</summary>
+        <p>En main propre à Bulle uniquement, jamais par envoi postal. Je fournis la boîte de transport. Prévoyez un habitacle tempéré, la boîte posée sur un siège plutôt qu'au sol, et jamais sur un siège chauffant. Nous prenons le temps de faire le tour de votre installation ensemble, et vous repartez avec le pedigree et la fiche de maintenance.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
   <div class="eclat" style="top:-14%;left:-12%;width:44%" aria-hidden="true">
     <svg viewBox="0 0 400 300"><g stroke="url(#g1)" fill="none" stroke-linecap="round">
       <path d="M-20 10 C 120 40 210 110 330 215" stroke-width="2"/>
