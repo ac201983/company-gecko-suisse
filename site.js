@@ -9,7 +9,7 @@
   // Mesure d'audience. Indiquer ici le code du site GoatCounter, c'est-à-dire
   // la partie placée avant « .goatcounter.com ». Tant que la valeur est vide,
   // aucune mesure n'est faite et le bandeau de consentement ne s'affiche pas.
-  var MESURE = { goatcounter: '' };
+  var MESURE = { goatcounter: 'companygecko' };
 
   // Numéro WhatsApp. Il est assemblé ici, à l'affichage, pour ne pas figurer
   // en clair dans le code des pages que lisent les robots collecteurs de numéros.
@@ -106,15 +106,17 @@
     if (choixConnu === 'oui') chargerMesure();
     else if (choixConnu === null) ouvrirBandeau(false);
 
-    // Liens « modifier mon choix » et texte de la page de confidentialité
+    // Liens « modifier mon choix »
     toutes('[data-mesure-lien]', function (el) { el.hidden = false; });
     toutes('[data-mesure-ouvrir]', function (b) {
       b.addEventListener('click', function () { ouvrirBandeau(true); });
     });
-    toutes('[data-mesure-etat]', function (el) {
-      el.hidden = el.getAttribute('data-mesure-etat') !== 'active';
-    });
   }
+
+  // La page de confidentialité décrit l'état réel : mesure active ou non
+  toutes('[data-mesure-etat]', function (el) {
+    el.hidden = el.getAttribute('data-mesure-etat') !== (mesureConfiguree ? 'active' : 'inactive');
+  });
 
   /* ---------- Formulaire de réservation ----------------------------------- */
 

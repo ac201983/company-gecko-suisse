@@ -24,9 +24,9 @@ Tout peut se faire depuis github.com : ouvrir le fichier, cliquer sur le crayon,
 
 **Changer ou ajouter une photo.** Déposer le `.jpg` dans `photos/`, puis lancer `python3 outils/optimiser_images.py`, qui fabrique les versions allégées. Sans ce passage, la page continue d'afficher les anciennes versions.
 
-**Activer la mesure d'audience.** Dans `site.js`, renseigner le code du site GoatCounter à la ligne `var MESURE = { goatcounter: '' };`. Le bandeau de consentement s'affiche alors de lui-même, et la page de confidentialité décrit l'outil.
+**Mesure d'audience.** Elle passe par le compte GoatCounter `companygecko`, renseigné dans `site.js` à la ligne `var MESURE = { goatcounter: 'companygecko' };`. Elle ne démarre qu'après accord du visiteur dans le bandeau. Vider la valeur (`''`) coupe la mesure, fait disparaître le bandeau et remet la page de confidentialité à l'état « aucun outil actif ».
 
-**Après une modification de `style.css` ou de `site.js`.** Augmenter le numéro dans `style.css?v=2` et `site.js?v=2`, en tête des quatre pages, pour que les navigateurs rechargent le fichier.
+**Après une modification de `style.css` ou de `site.js`.** Augmenter le numéro qui suit `style.css?v=` et `site.js?v=`, en tête des quatre pages, pour que les navigateurs rechargent le fichier.
 
 ## Vérifier avant de publier
 
