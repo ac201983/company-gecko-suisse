@@ -1,0 +1,13 @@
+# Company Gecko Suisse
+#
+# Un robots.txt n'est lu par les moteurs de recherche qu'à la racine d'un
+# domaine. Tant que le site est servi à l'adresse
+# ac201983.github.io/company-gecko-suisse/, ce fichier reste donc sans effet
+# (sans robots.txt, tout est autorisé, ce qui est le comportement voulu).
+# Il deviendra actif tel quel le jour où un nom de domaine propre sera
+# branché ; il faudra alors y mettre à jour l'adresse du plan de site.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://ac201983.github.io/company-gecko-suisse/sitemap.xml

@@ -1,20 +1,33 @@
 # Company Gecko Suisse
 
-Site vitrine de l'élevage, publié avec GitHub Pages.
+Site de l'élevage, publié avec GitHub Pages : https://ac201983.github.io/company-gecko-suisse/
 
-## Mettre à jour le site
+## Les fichiers
 
-Tout se fait depuis github.com, sans rien installer.
+- `index.html` : la page d'accueil, avec tout le contenu de l'élevage
+- `confidentialite.html`, `conditions.html` : les pages légales
+- `404.html` : la page affichée pour une adresse qui n'existe pas
+- `style.css` : l'apparence, commune à toutes les pages
+- `site.js` : le formulaire, le contact WhatsApp et le bandeau de consentement
+- `photos/` : les photos, avec pour chacune le `.jpg` d'origine et ses versions allégées `.avif` et `.webp`
+- `polices/` : les polices, hébergées sur le site
+- `sitemap.xml`, `robots.txt`, `site.webmanifest` : pour les moteurs de recherche et les navigateurs
+- `outils/` : deux scripts d'entretien, pour les images et pour la vérification des liens
 
-**Changer une photo de jeune** : ouvrir le dossier `photos`, cliquer sur `jeune-1.jpg` (ou 2, 3, 4), puis sur l'icône de corbeille pour la supprimer. Ensuite revenir dans `photos`, cliquer sur « Add file » puis « Upload files », et déposer votre photo en la renommant exactement `jeune-1.jpg`. Les photos carrées rendent le mieux.
+## Les modifications courantes
 
-**Marquer un bébé comme réservé** : ouvrir `index.html`, cliquer sur le crayon, chercher `<figcaption>Disponible</figcaption>` et remplacer `Disponible` par `Réservé`. Puis « Commit changes » en bas.
+Tout peut se faire depuis github.com : ouvrir le fichier, cliquer sur le crayon, modifier, puis « Commit changes ». Le site est à jour une à deux minutes plus tard.
 
-**Ajouter ou retirer un emplacement photo** : dans `index.html`, dupliquer ou supprimer une ligne complète qui commence par `<figure>`.
+**Marquer un gecko comme réservé.** Dans `index.html`, chercher sa date de naissance. Sur la ligne `<article class="jeune">` placée juste au-dessus, écrire `<article class="jeune jeune--reserve">`. Remplacer ensuite `<p class="statut statut--libre">Libre</p>` par `<p class="statut statut--reserve">Réservé</p>`. Ses photos passent en gris et son bouton « Réserver ce gecko » disparaît. Retirer aussi sa ligne `<option>` dans le formulaire, plus bas dans la page.
 
-Chaque modification est en ligne une à deux minutes plus tard.
+**Changer un prix.** Il apparaît trois fois pour chaque gecko dans `index.html` : le prix affiché, l'attribut `data-gecko` du bouton, et la ligne `<option>` du formulaire. Ces deux derniers textes doivent rester identiques au caractère près, sinon le bouton ne présélectionne plus le bon animal.
 
-## Structure
+**Changer ou ajouter une photo.** Déposer le `.jpg` dans `photos/`, puis lancer `python3 outils/optimiser_images.py`, qui fabrique les versions allégées. Sans ce passage, la page continue d'afficher les anciennes versions.
 
-- `index.html` — tout le site, une seule page
-- `photos/` — les photos des jeunes de la saison
+**Activer la mesure d'audience.** Dans `site.js`, renseigner le code du site GoatCounter à la ligne `var MESURE = { goatcounter: '' };`. Le bandeau de consentement s'affiche alors de lui-même, et la page de confidentialité décrit l'outil.
+
+**Après une modification de `style.css` ou de `site.js`.** Augmenter le numéro dans `style.css?v=2` et `site.js?v=2`, en tête des quatre pages, pour que les navigateurs rechargent le fichier.
+
+## Vérifier avant de publier
+
+`python3 outils/verifier_liens.py` contrôle tous les liens internes, les images et les ancres du site.

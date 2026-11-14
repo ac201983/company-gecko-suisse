@@ -1,413 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>if(location.protocol==="http:"&&!/^(localhost|127\.)/.test(location.hostname))location.replace("https:"+location.href.slice(5))</script>
 <title>Company Gecko Suisse — Élevage de geckos léopards à Bulle</title>
-<meta name="description" content="Élevage suisse de geckos léopards à Bulle, canton de Fribourg. Passion, qualité, bien-être. Jeunes nés sur place, remis avec pedigree, fiche de maintenance et suivi après l'adoption.">
-<meta property="og:title" content="Company Gecko Suisse">
-<meta property="og:description" content="Élevage suisse de geckos léopards à Bulle. Pedigree et suivi avec chaque animal.">
-<meta property="og:image" content="logo.png">
+<meta name="description" content="Élevage familial de geckos léopards à Bulle (Fribourg). Jeunes nés sur place, remis en main propre avec pedigree, fiche de maintenance et suivi après adoption.">
+<link rel="canonical" href="https://ac201983.github.io/company-gecko-suisse/">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Company Gecko Suisse">
+<meta property="og:locale" content="fr_CH">
+<meta property="og:url" content="https://ac201983.github.io/company-gecko-suisse/">
+<meta property="og:title" content="Company Gecko Suisse — Élevage de geckos léopards à Bulle">
+<meta property="og:description" content="Jeunes geckos léopards nés à Bulle, remis en main propre avec pedigree, fiche de maintenance et suivi après l'adoption.">
+<meta property="og:image" content="https://ac201983.github.io/company-gecko-suisse/apercu.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Un gecko léopard et le logo doré Company Gecko Suisse, élevage de gecko léopard">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0B0A08">
-<link rel="icon" href="favicon.png" type="image/png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
-<style>
-:root{
-  --noir:#0B0A08;
-  --noir-2:#141210;
-  --noir-3:#1C1915;
-  --or:#D4A017;
-  --or-clair:#F2D98B;
-  --or-pale:#C9B069;
-  --or-sombre:#8A6410;
-  --creme:#F3EADA;
-  --gris:#A79C8A;
-  --degrade-or:linear-gradient(170deg,#FBEFC4 2%,#E8C45C 24%,#C9971B 52%,#8E6711 74%,#F0D584 100%);
-}
-
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-
-body{
-  margin:0;
-  background:var(--noir);
-  color:var(--creme);
-  font-family:Montserrat,system-ui,sans-serif;
-  font-size:16.5px;
-  font-weight:300;
-  line-height:1.75;
-  -webkit-font-smoothing:antialiased;
-}
-img{max-width:100%;display:block}
-a{color:inherit}
-
-.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
-.lisible{max-width:60ch}
-
-/* ---- texte doré ---- */
-.or{
-  background:var(--degrade-or);
-  -webkit-background-clip:text;background-clip:text;
-  color:transparent;
-}
-
-/* ---- titres ---- */
-h1,h2,h3{margin:0;font-family:Cinzel,Georgia,serif;font-weight:600;line-height:1.2}
-.script{font-family:'Pinyon Script',cursive;font-weight:400}
-
-.surtitre{
-  font-family:'Pinyon Script',cursive;
-  font-size:clamp(1.5rem,3.4vw,2.1rem);
-  color:var(--or-pale);
-  line-height:1;
-  margin-bottom:.35rem;
-}
-.titre-2{
-  font-size:clamp(1.6rem,3.6vw,2.4rem);
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-.sous-titre{
-  font-family:Montserrat,sans-serif;
-  font-size:.76rem;font-weight:500;
-  letter-spacing:.34em;text-transform:uppercase;
-  color:var(--or-pale);
-  margin:.9rem 0 0;
-}
-
-/* séparateur doré losange */
-.filet{display:flex;align-items:center;gap:.7rem;margin:1.5rem 0 2.2rem}
-.filet::before,.filet::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--or-sombre),transparent)}
-.filet span{
-  width:7px;height:7px;transform:rotate(45deg);
-  background:var(--or);box-shadow:0 0 10px rgba(212,160,23,.6);
-}
-.filet--court{justify-content:center}
-.filet--court::before,.filet--court::after{max-width:120px}
-
-
-/* ---- HERO ---- */
-.hero{
-  position:relative;overflow:hidden;text-align:center;
-  background:linear-gradient(180deg,#000 0%,#000 46%,var(--noir) 100%);
-  padding:0 0 clamp(3rem,8vw,5rem);
-  border-bottom:1px solid rgba(212,160,23,.28);
-}
-.banniere{
-  width:min(1400px,100%);margin:0 auto;
-  background:#000;
-}
-.banniere img{width:100%;height:auto;display:block}
-@media (prefers-reduced-motion:no-preference){
-  .banniere img{animation:apparaitre 1.4s ease-out both}
-  .hero__texte{animation:apparaitre 1.2s ease-out both;animation-delay:.35s}
-}
-@keyframes apparaitre{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-.hero__texte{margin-top:clamp(.6rem,2vw,1.4rem)}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.hero .chapeau{
-  margin:1.4rem auto 0;max-width:54ch;
-  color:#CCC0AC;font-size:clamp(.95rem,1.7vw,1.05rem);
-}
-.devise{
-  margin:0;
-  font-size:.72rem;letter-spacing:.42em;text-transform:uppercase;
-  color:var(--or-pale);font-weight:500;
-}
-.actions{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center;margin-top:2.2rem}
-.bouton{
-  display:inline-block;padding:.85rem 1.9rem;
-  font-family:Montserrat,sans-serif;font-size:.78rem;font-weight:600;
-  letter-spacing:.17em;text-transform:uppercase;text-decoration:none;
-  background:var(--degrade-or);color:#1A1203;
-  border:1px solid transparent;
-  transition:filter .2s ease;
-}
-.bouton:hover{filter:brightness(1.12)}
-.bouton--ligne{
-  background:transparent;color:var(--or-clair);
-  border-color:rgba(212,160,23,.55);
-}
-.bouton--ligne:hover{background:rgba(212,160,23,.1);filter:none}
-
-/* ---- sections ---- */
-section{padding:clamp(3.4rem,8vw,5.6rem) 0;position:relative}
-.alt{background:var(--noir-2);border-block:1px solid rgba(212,160,23,.16)}
-.intro p{margin:0 0 1rem;color:#C6BAA6}
-
-/* ce qui est remis */
-.remise{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));margin-top:2.6rem}
-.remise__item{display:flex;gap:1.1rem;align-items:flex-start}
-.jeton{
-  flex:0 0 46px;width:46px;height:46px;border-radius:50%;
-  border:1px solid var(--or-sombre);
-  display:grid;place-items:center;
-  background:radial-gradient(circle at 35% 25%, rgba(212,160,23,.22), transparent 70%);
-}
-.jeton svg{width:21px;height:21px;stroke:var(--or);fill:none;stroke-width:1.5}
-.remise h3{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or-clair);margin-bottom:.35rem}
-.remise p{margin:0;font-size:.9rem;color:var(--gris);line-height:1.65}
-
-/* ---- fiches reproducteurs ---- */
-.trio{display:grid;gap:1.6rem;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));margin-top:2.6rem}
-.fiche{
-  display:flex;flex-direction:column;
-  background:linear-gradient(180deg,var(--noir-3),var(--noir-2));
-  border:1px solid rgba(212,160,23,.34);
-  padding:1.5rem 1.4rem 1.4rem;
-  position:relative;
-}
-.fiche::after{
-  content:"";position:absolute;inset:5px;
-  border:1px solid rgba(212,160,23,.14);pointer-events:none;
-}
-.fiche__photo{
-  aspect-ratio:3/2;object-fit:cover;width:100%;
-  border:1px solid rgba(212,160,23,.4);
-  margin-bottom:1.1rem;
-}
-.fiche__nom{font-size:1.55rem;letter-spacing:.1em;text-transform:uppercase}
-.fiche__sexe{
-  margin:.35rem 0 .9rem;font-size:.68rem;font-weight:600;
-  letter-spacing:.26em;text-transform:uppercase;color:var(--or-pale);
-}
-.fiche__morph{margin:0 0 1.2rem;font-size:.92rem;color:#CFC3AE;line-height:1.6}
-.fiche dl{
-  margin:auto 0 0;padding-top:1rem;font-size:.82rem;
-  border-top:1px solid rgba(212,160,23,.22);
-  display:grid;grid-template-columns:5.2em 1fr;gap:.4rem .8rem;
-  color:var(--gris);
-}
-.fiche dt{font-weight:500;letter-spacing:.1em;text-transform:uppercase;font-size:.68rem;color:var(--or-pale);align-self:center}
-.fiche dd{margin:0}
-
-/* lignées */
-.lignees{display:grid;gap:1.6rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:2.6rem}
-.lignee{padding-left:1.3rem;border-left:2px solid var(--or-sombre)}
-.lignee h3{font-size:1.05rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem}
-.lignee p{margin:0;font-size:.92rem;color:var(--gris)}
-
-/* ---- jeunes ---- */
-.jeune{
-  display:grid;gap:1.5rem 2.6rem;
-  grid-template-columns:minmax(0,1fr);
-  padding:2.4rem 0;
-  border-top:1px solid rgba(212,160,23,.2);
-}
-.jeune:first-of-type{margin-top:2.4rem}
-@media (min-width:800px){
-  .jeune{grid-template-columns:minmax(0,19.5rem) minmax(0,1fr);align-items:start}
-}
-.jeune h3{font-size:1.2rem;letter-spacing:.09em;text-transform:uppercase}
-.jeune__filiation{
-  margin:.4rem 0 1rem;font-size:.68rem;font-weight:600;
-  letter-spacing:.24em;text-transform:uppercase;color:var(--or-pale);
-}
-.jeune__texte p{margin:0 0 .9rem;color:var(--gris);font-size:.93rem}
-.jeune__prix{
-  display:inline-block;margin:.3rem 0 0;padding:.45rem 1.1rem;
-  border:1px solid rgba(212,160,23,.45);
-  font-size:.82rem;font-weight:600;letter-spacing:.14em;
-}
-.jeune__photos{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
-.jeune__photos img{
-  aspect-ratio:4/5;object-fit:cover;width:100%;
-  border:1px solid rgba(212,160,23,.32);
-}
-
-/* ---- soins ---- */
-.soins ol{list-style:none;counter-reset:s;padding:0;margin:2.6rem 0 0;max-width:72ch}
-.soins li{
-  counter-increment:s;position:relative;
-  padding:1.2rem 0 1.2rem 2.2rem;
-  border-top:1px solid rgba(212,160,23,.18);
-}
-.soins li:last-child{border-bottom:1px solid rgba(212,160,23,.18)}
-.soins li::before{
-  content:"";position:absolute;left:4px;top:1.75rem;
-  width:7px;height:7px;transform:rotate(45deg);
-  background:var(--or);box-shadow:0 0 9px rgba(212,160,23,.55);
-}
-.soins b{
-  display:block;font-weight:500;color:var(--or-clair);
-  font-size:.78rem;letter-spacing:.17em;text-transform:uppercase;
-  margin-bottom:.45rem;
-}
-.soins li span{color:var(--gris);font-size:.93rem}
-
-/* ---- contact ---- */
-.contact{
-  position:relative;overflow:hidden;text-align:center;
-  background:radial-gradient(85% 120% at 50% 0%, #241B0C 0%, var(--noir) 62%);
-  border-top:1px solid rgba(212,160,23,.28);
-}
-.contact p{max-width:52ch;margin-inline:auto;color:#C6BAA6}
-.contact .actions{margin-top:2.2rem}
-
-footer{
-  padding:2rem 0 2.6rem;text-align:center;
-  font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;
-  color:#6E6558;
-  border-top:1px solid rgba(212,160,23,.14);
-}
-
-/* ---- navigation ---- */
-.nav{
-  position:sticky;top:0;z-index:20;
-  background:rgba(11,10,8,.93);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid rgba(212,160,23,.22);
-}
-.nav__in{
-  display:flex;gap:.2rem;align-items:center;
-  overflow-x:auto;scrollbar-width:none;
-  padding:.1rem 0;
-}
-.nav__in::-webkit-scrollbar{display:none}
-.nav a{
-  flex:0 0 auto;padding:.85rem .85rem;
-  font-size:.66rem;font-weight:500;letter-spacing:.17em;
-  text-transform:uppercase;text-decoration:none;color:var(--gris);
-  white-space:nowrap;transition:color .18s ease;
-}
-.nav a:hover{color:var(--or-clair)}
-.nav img{flex:0 0 auto;width:34px;height:34px;margin-right:.7rem}
-section{scroll-margin-top:60px}
-
-/* ---- listes de matériel ---- */
-.materiel{display:grid;gap:1.8rem 2.6rem;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));margin-top:2.4rem}
-.materiel h3{
-  font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--or-clair);margin-bottom:1rem;
-}
-.materiel ul{list-style:none;margin:0;padding:0}
-.materiel li{
-  position:relative;padding:.55rem 0 .55rem 1.5rem;
-  font-size:.92rem;color:var(--gris);
-  border-bottom:1px solid rgba(212,160,23,.12);
-}
-.materiel li::before{
-  content:"";position:absolute;left:2px;top:1.05rem;
-  width:5px;height:5px;transform:rotate(45deg);background:var(--or-sombre);
-}
-.materiel li b{color:var(--creme);font-weight:500}
-
-/* ---- encadré doré ---- */
-.encadre{
-  margin-top:2.4rem;padding:1.6rem 1.7rem;
-  border:1px solid rgba(212,160,23,.38);
-  background:linear-gradient(180deg,rgba(212,160,23,.07),transparent);
-}
-.encadre h3{
-  font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--or-clair);margin-bottom:.7rem;
-}
-.encadre p{margin:0;color:#C6BAA6;font-size:.94rem}
-.encadre p + p{margin-top:.8rem}
-
-/* ---- tableau ---- */
-.tableau{width:100%;border-collapse:collapse;margin-top:2.2rem;font-size:.88rem}
-.tableau th{
-  text-align:left;padding:.8rem .9rem;
-  font-family:Montserrat,sans-serif;font-size:.64rem;font-weight:600;
-  letter-spacing:.18em;text-transform:uppercase;color:#1A1203;
-  background:var(--degrade-or);
-}
-.tableau td{padding:.8rem .9rem;border-bottom:1px solid rgba(212,160,23,.16);color:var(--gris)}
-.tableau tr td:first-child{color:var(--creme)}
-.table-wrap{overflow-x:auto}
-
-/* ---- questions ---- */
-.faq{margin-top:2.4rem;max-width:74ch}
-.faq details{border-top:1px solid rgba(212,160,23,.18)}
-.faq details:last-of-type{border-bottom:1px solid rgba(212,160,23,.18)}
-.faq summary{
-  cursor:pointer;list-style:none;padding:1.15rem 2rem 1.15rem 0;position:relative;
-  font-size:.95rem;color:var(--creme);
-}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{
-  content:"";position:absolute;right:6px;top:1.5rem;
-  width:8px;height:8px;border-right:1.5px solid var(--or);border-bottom:1.5px solid var(--or);
-  transform:rotate(45deg);transition:transform .2s ease;
-}
-.faq details[open] summary::after{transform:rotate(-135deg)}
-.faq details p{margin:0 0 1.15rem;color:var(--gris);font-size:.92rem;max-width:66ch}
-
-/* ---- statut ---- */
-.statut{
-  display:inline-block;margin:0 0 .9rem;padding:.3rem .85rem;
-  font-size:.62rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
-}
-.statut--libre{border:1px solid rgba(212,160,23,.5);color:var(--or-clair)}
-.statut--reserve{border:1px solid rgba(167,156,138,.4);color:var(--gris)}
-.jeune--reserve .jeune__photos img{filter:grayscale(.75) brightness(.72)}
-
-/* ---- formulaire ---- */
-.form{
-  margin-top:2.6rem;max-width:62ch;
-  border:1px solid rgba(212,160,23,.34);
-  background:linear-gradient(180deg,rgba(212,160,23,.06),transparent);
-  padding:1.8rem 1.7rem;
-}
-.form .champ{margin-bottom:1.25rem}
-.form label{
-  display:block;margin-bottom:.45rem;
-  font-size:.66rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--or-pale);
-}
-.form input,.form select,.form textarea{
-  width:100%;padding:.72rem .85rem;
-  background:rgba(0,0,0,.4);
-  border:1px solid rgba(212,160,23,.3);
-  color:var(--creme);
-  font-family:Montserrat,sans-serif;font-size:.94rem;font-weight:300;
-  border-radius:0;
-}
-.form textarea{min-height:92px;resize:vertical;line-height:1.6}
-.form input:focus,.form select:focus,.form textarea:focus{
-  outline:none;border-color:var(--or);background:rgba(0,0,0,.55);
-}
-.form select{appearance:none;cursor:pointer}
-.form select option{background:#15120D;color:var(--creme)}
-.form .deux{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
-.form .aide{margin:.45rem 0 0;font-size:.78rem;color:#8A8070}
-.form button{
-  width:100%;margin-top:.5rem;padding:.95rem;cursor:pointer;
-  font-family:Montserrat,sans-serif;font-size:.78rem;font-weight:600;
-  letter-spacing:.17em;text-transform:uppercase;
-  background:var(--degrade-or);color:#1A1203;border:none;
-}
-.form button:hover{filter:brightness(1.1)}
-.form .note{margin:1.1rem 0 0;font-size:.78rem;color:#8A8070;text-align:center}
-
-.jeune__pied{display:flex;flex-wrap:wrap;align-items:center;gap:.9rem;margin-top:.4rem}
-.jeune__pied .jeune__prix{margin:0}
-.reserver-ce{
-  font-size:.68rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase;
-  color:var(--or-clair);text-decoration:none;
-  border-bottom:1px solid rgba(212,160,23,.5);padding-bottom:.2rem;
-}
-.reserver-ce:hover{color:#FBEFC4}
-
-a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-offset:4px}
-</style>
+<link rel="icon" href="favicon.png" type="image/png" sizes="64x64">
+<link rel="icon" href="icone-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="polices/montserrat.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css?v=2">
+<script src="site.js?v=2" defer></script>
 </head>
 <body>
+<a class="evitement" href="#contenu">Aller au contenu</a>
 
-<header class="hero">
+<header class="hero" id="haut">
   <div class="banniere">
     <picture>
-      <source media="(max-width: 700px)" srcset="banniere-mobile.jpg">
+      <source media="(max-width: 700px)" type="image/avif" srcset="banniere-mobile-750.avif 750w, banniere-mobile-1000.avif 1000w" sizes="100vw" width="1000" height="1759">
+      <source media="(max-width: 700px)" type="image/webp" srcset="banniere-mobile-750.webp 750w, banniere-mobile-1000.webp 1000w" sizes="100vw" width="1000" height="1759">
+      <source media="(max-width: 700px)" srcset="banniere-mobile.jpg" width="1000" height="1759">
+      <source type="image/avif" srcset="banniere-1200.avif 1200w, banniere-1710.avif 1710w" sizes="(min-width: 1400px) 1400px, 100vw">
+      <source type="image/webp" srcset="banniere-1200.webp 1200w, banniere-1710.webp 1710w" sizes="(min-width: 1400px) 1400px, 100vw">
       <img src="banniere.jpg"
            srcset="banniere-1200.jpg 1200w, banniere.jpg 1710w"
-           sizes="(min-width: 1500px) 1400px, 100vw"
+           sizes="(min-width: 1400px) 1400px, 100vw"
            alt="Company Gecko Suisse — élevage de gecko léopard. Passion, qualité, bien-être."
-           width="1710" height="822" fetchpriority="high">
+           width="1710" height="822" fetchpriority="high" decoding="async">
     </picture>
   </div>
   <div class="wrap hero__texte">
@@ -416,28 +52,35 @@ a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-
     <div class="filet filet--court"><span></span></div>
     <p class="chapeau">Des geckos léopards nés et élevés à Bulle, en Gruyère. Chaque jeune part avec son pedigree sur trois générations, sa fiche de maintenance, et un éleveur qui reste joignable longtemps après l'adoption.</p>
     <div class="actions">
-      <a class="bouton" href="https://wa.me/41797235033">Nous écrire</a>
-      <a class="bouton bouton--ligne" href="#disponibles">Les jeunes disponibles</a>
+      <a class="bouton" href="#reserver">Réserver un gecko</a>
     </div>
+    <p class="apres-action"><a class="lien" href="#disponibles">Voir d'abord les jeunes disponibles</a></p>
   </div>
 </header>
 
 <nav class="nav" aria-label="Sections du site">
   <div class="wrap nav__in">
-    <img src="logo.png" alt="" aria-hidden="true">
-    <a href="#elevage">L'élevage</a>
-    <a href="#reproducteurs">Reproducteurs</a>
-    <a href="#disponibles">Disponibles</a>
-    <a href="#installation">L'installation</a>
-    <a href="#cohabitation">Un ou plusieurs ?</a>
-    <a href="#alimentation">Alimentation</a>
-    <a href="#questions">Questions</a>
-    <a href="#reserver">Réserver</a>
-    <a href="#contact">Contact</a>
+    <a class="nav__logo" href="#haut" aria-label="Company Gecko Suisse, retour en haut de page">
+      <picture>
+        <source type="image/webp" srcset="logo-102.webp">
+        <img src="logo-102.png" alt="" width="34" height="34">
+      </picture>
+    </a>
+    <div class="nav__liens">
+      <a href="#elevage">L'élevage</a>
+      <a href="#reproducteurs">Reproducteurs</a>
+      <a href="#disponibles">Disponibles</a>
+      <a href="#installation">L'installation</a>
+      <a href="#cohabitation">Un ou plusieurs ?</a>
+      <a href="#alimentation">Alimentation</a>
+      <a href="#questions">Questions</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav__cta" href="#reserver">Réserver</a>
   </div>
 </nav>
 
-<main>
+<main id="contenu">
 
 <section id="elevage">
   <div class="wrap">
@@ -485,7 +128,11 @@ a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-
 
     <div class="trio">
       <article class="fiche">
-        <img class="fiche__photo" src="photos/akame.jpg" alt="Akame, mâle Tangerine cross Red Stripe Bold" loading="lazy">
+        <picture>
+          <source type="image/avif" srcset="photos/akame-640.avif 640w, photos/akame-960.avif 960w" sizes="(min-width: 1160px) 311px, (min-width: 908px) 27vw, (min-width: 610px) 41vw, calc(100vw - 85px)">
+          <source type="image/webp" srcset="photos/akame-640.webp 640w, photos/akame-960.webp 960w" sizes="(min-width: 1160px) 311px, (min-width: 908px) 27vw, (min-width: 610px) 41vw, calc(100vw - 85px)">
+          <img class="fiche__photo" src="photos/akame.jpg" alt="Akame, mâle Tangerine cross Red Stripe Bold" width="1200" height="800" loading="lazy" decoding="async">
+        </picture>
         <h3 class="fiche__nom or">Akame</h3>
         <p class="fiche__sexe">Mâle</p>
         <p class="fiche__morph">Tangerine cross Red Stripe Bold</p>
@@ -497,7 +144,11 @@ a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-
       </article>
 
       <article class="fiche">
-        <img class="fiche__photo" src="photos/winry.jpg" alt="Winry, femelle Snow cross Black Night" loading="lazy">
+        <picture>
+          <source type="image/avif" srcset="photos/winry-640.avif 640w, photos/winry-960.avif 960w" sizes="(min-width: 1160px) 311px, (min-width: 908px) 27vw, (min-width: 610px) 41vw, calc(100vw - 85px)">
+          <source type="image/webp" srcset="photos/winry-640.webp 640w, photos/winry-960.webp 960w" sizes="(min-width: 1160px) 311px, (min-width: 908px) 27vw, (min-width: 610px) 41vw, calc(100vw - 85px)">
+          <img class="fiche__photo" src="photos/winry.jpg" alt="Winry, femelle Snow cross Black Night" width="1200" height="800" loading="lazy" decoding="async">
+        </picture>
         <h3 class="fiche__nom or">Winry</h3>
         <p class="fiche__sexe">Femelle</p>
         <p class="fiche__morph">Albey's Line Bred Snow cross Black Night</p>
@@ -509,7 +160,11 @@ a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-
       </article>
 
       <article class="fiche">
-        <img class="fiche__photo" src="photos/power.jpg" alt="Power, femelle Mack Super Snow Eclipse" loading="lazy">
+        <picture>
+          <source type="image/avif" srcset="photos/power-640.avif 640w, photos/power-960.avif 960w" sizes="(min-width: 1160px) 311px, (min-width: 908px) 27vw, (min-width: 610px) 41vw, calc(100vw - 85px)">
+          <source type="image/webp" srcset="photos/power-640.webp 640w, photos/power-960.webp 960w" sizes="(min-width: 1160px) 311px, (min-width: 908px) 27vw, (min-width: 610px) 41vw, calc(100vw - 85px)">
+          <img class="fiche__photo" src="photos/power.jpg" alt="Power, femelle Mack Super Snow Eclipse" width="1200" height="800" loading="lazy" decoding="async">
+        </picture>
         <h3 class="fiche__nom or">Power</h3>
         <p class="fiche__sexe">Femelle</p>
         <p class="fiche__morph">Mack Super Snow Eclipse</p>
@@ -548,12 +203,24 @@ a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-
         <p class="statut statut--libre">Libre</p>
         <p>Le plus âgé des trois, et le plus posé. Il se laisse manipuler sans broncher, ce qui en fait un bon candidat pour une première expérience.</p>
         <p>Sa queue est plus courte que la moyenne. C'est une particularité esthétique, qui ne change rien à sa santé ni à son appétit.</p>
-        <div class="jeune__pied"><p class="jeune__prix or">100 CHF</p><a class="reserver-ce" href="#reserver" data-gecko="Né le 16 juin 2026 — 100 CHF">Le réserver</a></div>
+        <div class="jeune__pied"><p class="jeune__prix or">100 CHF</p><a class="reserver-ce" href="#reserver" data-gecko="Né le 16 juin 2026 — 100 CHF">Réserver ce gecko</a></div>
       </div>
       <div class="jeune__photos">
-        <img src="photos/gecko1-a.jpg" alt="Jeune gecko léopard né le 16 juin 2026, vu de dessus" loading="lazy">
-        <img src="photos/gecko1-b.jpg" alt="Le même gecko sur une main" loading="lazy">
-        <img src="photos/gecko1-c.jpg" alt="Gros plan sur la tête du même gecko" loading="lazy">
+        <picture>
+          <source type="image/avif" srcset="photos/gecko1-a-400.avif 400w, photos/gecko1-a-720.avif 720w" sizes="(min-width: 1160px) 248px, (min-width: 800px) calc(33.3vw - 140px), calc(33.3vw - 22px)">
+          <source type="image/webp" srcset="photos/gecko1-a-400.webp 400w, photos/gecko1-a-720.webp 720w" sizes="(min-width: 1160px) 248px, (min-width: 800px) calc(33.3vw - 140px), calc(33.3vw - 22px)">
+          <img src="photos/gecko1-a.jpg" alt="Jeune gecko léopard né le 16 juin 2026, vu de dessus" width="960" height="1200" loading="lazy" decoding="async">
+        </picture>
+        <picture>
+          <source type="image/avif" srcset="photos/gecko1-b-400.avif 400w, photos/gecko1-b-720.avif 720w" sizes="(min-width: 1160px) 248px, (min-width: 800px) calc(33.3vw - 140px), calc(33.3vw - 22px)">
+          <source type="image/webp" srcset="photos/gecko1-b-400.webp 400w, photos/gecko1-b-720.webp 720w" sizes="(min-width: 1160px) 248px, (min-width: 800px) calc(33.3vw - 140px), calc(33.3vw - 22px)">
+          <img src="photos/gecko1-b.jpg" alt="Le gecko né le 16 juin 2026, posé sur une main" width="960" height="1200" loading="lazy" decoding="async">
+        </picture>
+        <picture>
+          <source type="image/avif" srcset="photos/gecko1-c-400.avif 400w, photos/gecko1-c-720.avif 720w" sizes="(min-width: 1160px) 248px, (min-width: 800px) calc(33.3vw - 140px), calc(33.3vw - 22px)">
+          <source type="image/webp" srcset="photos/gecko1-c-400.webp 400w, photos/gecko1-c-720.webp 720w" sizes="(min-width: 1160px) 248px, (min-width: 800px) calc(33.3vw - 140px), calc(33.3vw - 22px)">
+          <img src="photos/gecko1-c.jpg" alt="Gros plan sur la tête du gecko né le 16 juin 2026" width="960" height="1200" loading="lazy" decoding="async">
+        </picture>
       </div>
     </article>
 
@@ -564,12 +231,24 @@ a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-
         <p class="statut statut--libre">Libre</p>
         <p>Né le jour de la fête nationale, ce qui lui vaut déjà une petite histoire à raconter.</p>
         <p>Sa robe est nettement plus claire que celle de ses frères, avec des bandes larges et bien dessinées sur un fond lavande et jaune. L'influence Snow de sa mère se voit tout de suite.</p>
-        <div class="jeune__pied"><p class="jeune__prix or">140 CHF</p><a class="reserver-ce" href="#reserver" data-gecko="Né le 1er août 2026 — 140 CHF">Le réserver</a></div>
+        <div class="jeune__pied"><p class="jeune__prix or">140 CHF</p><a class="reserver-ce" href="#reserver" data-gecko="Né le 1er août 2026 — 140 CHF">Réserver ce gecko</a></div>
       </div>
       <div class="jeune__photos">
-        <img src="photos/gecko2-a.jpg" alt="Jeune gecko léopard né le 1er août 2026, tête de face" loading="lazy">
-        <img src="photos/gecko2-b.jpg" alt="Le même gecko sur une main, vu de dessus" loading="lazy">
-        <img src="photos/gecko2-c.jpg" alt="Le même gecko montrant ses bandes claires" loading="lazy">
+        <picture>
+          <source type="image/avif" srcset="photos/gecko2-a-400.avif 400w, photos/gecko2-a-720.avif 720w" sizes="(min-width: 1160px) 248px, (min-width: 800px) calc(33.3vw - 140px), calc(33.3vw - 22px)">
+          <source type="image/webp" srcset="photos/gecko2-a-400.webp 400w, photos/gecko2-a-720.webp 720w" sizes="(min-width: 1160px) 248px, (min-width: 800px) calc(33.3vw - 140px), calc(33.3vw - 22px)">
+          <img src="photos/gecko2-a.jpg" alt="Jeune gecko léopard né le 1er août 2026, tête de face" width="960" height="1200" loading="lazy" decoding="async">
+        </picture>
+        <picture>
+          <source type="image/avif" srcset="photos/gecko2-b-400.avif 400w, photos/gecko2-b-720.avif 720w" sizes="(min-width: 1160px) 248px, (min-width: 800px) calc(33.3vw - 140px), calc(33.3vw - 22px)">
+          <source type="image/webp" srcset="photos/gecko2-b-400.webp 400w, photos/gecko2-b-720.webp 720w" sizes="(min-width: 1160px) 248px, (min-width: 800px) calc(33.3vw - 140px), calc(33.3vw - 22px)">
+          <img src="photos/gecko2-b.jpg" alt="Le gecko né le 1er août 2026 sur une main, vu de dessus" width="960" height="1200" loading="lazy" decoding="async">
+        </picture>
+        <picture>
+          <source type="image/avif" srcset="photos/gecko2-c-400.avif 400w, photos/gecko2-c-720.avif 720w" sizes="(min-width: 1160px) 248px, (min-width: 800px) calc(33.3vw - 140px), calc(33.3vw - 22px)">
+          <source type="image/webp" srcset="photos/gecko2-c-400.webp 400w, photos/gecko2-c-720.webp 720w" sizes="(min-width: 1160px) 248px, (min-width: 800px) calc(33.3vw - 140px), calc(33.3vw - 22px)">
+          <img src="photos/gecko2-c.jpg" alt="Les bandes claires du gecko né le 1er août 2026" width="960" height="1200" loading="lazy" decoding="async">
+        </picture>
       </div>
     </article>
 
@@ -580,12 +259,24 @@ a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-
         <p class="statut statut--libre">Libre</p>
         <p>Le benjamin, et le plus vif des trois. Il bouge beaucoup et explore sans arrêt : un tempérament qui plaira à qui aime observer un animal actif le soir.</p>
         <p>Belle queue longue et bien annelée, encore dans sa livrée de bébé.</p>
-        <div class="jeune__pied"><p class="jeune__prix or">120 CHF</p><a class="reserver-ce" href="#reserver" data-gecko="Né le 18 septembre 2026 — 120 CHF">Le réserver</a></div>
+        <div class="jeune__pied"><p class="jeune__prix or">120 CHF</p><a class="reserver-ce" href="#reserver" data-gecko="Né le 18 septembre 2026 — 120 CHF">Réserver ce gecko</a></div>
       </div>
       <div class="jeune__photos">
-        <img src="photos/gecko3-a.jpg" alt="Jeune gecko léopard né le 18 septembre 2026, marchant sur une main" loading="lazy">
-        <img src="photos/gecko3-b.jpg" alt="Le même gecko vu de dessus" loading="lazy">
-        <img src="photos/gecko3-c.jpg" alt="Le même gecko montrant sa longue queue" loading="lazy">
+        <picture>
+          <source type="image/avif" srcset="photos/gecko3-a-400.avif 400w, photos/gecko3-a-720.avif 720w" sizes="(min-width: 1160px) 248px, (min-width: 800px) calc(33.3vw - 140px), calc(33.3vw - 22px)">
+          <source type="image/webp" srcset="photos/gecko3-a-400.webp 400w, photos/gecko3-a-720.webp 720w" sizes="(min-width: 1160px) 248px, (min-width: 800px) calc(33.3vw - 140px), calc(33.3vw - 22px)">
+          <img src="photos/gecko3-a.jpg" alt="Jeune gecko léopard né le 18 septembre 2026, marchant sur une main" width="960" height="1200" loading="lazy" decoding="async">
+        </picture>
+        <picture>
+          <source type="image/avif" srcset="photos/gecko3-b-400.avif 400w, photos/gecko3-b-720.avif 720w" sizes="(min-width: 1160px) 248px, (min-width: 800px) calc(33.3vw - 140px), calc(33.3vw - 22px)">
+          <source type="image/webp" srcset="photos/gecko3-b-400.webp 400w, photos/gecko3-b-720.webp 720w" sizes="(min-width: 1160px) 248px, (min-width: 800px) calc(33.3vw - 140px), calc(33.3vw - 22px)">
+          <img src="photos/gecko3-b.jpg" alt="Le gecko né le 18 septembre 2026, vu de dessus" width="960" height="1200" loading="lazy" decoding="async">
+        </picture>
+        <picture>
+          <source type="image/avif" srcset="photos/gecko3-c-400.avif 400w, photos/gecko3-c-720.avif 720w" sizes="(min-width: 1160px) 248px, (min-width: 800px) calc(33.3vw - 140px), calc(33.3vw - 22px)">
+          <source type="image/webp" srcset="photos/gecko3-c-400.webp 400w, photos/gecko3-c-720.webp 720w" sizes="(min-width: 1160px) 248px, (min-width: 800px) calc(33.3vw - 140px), calc(33.3vw - 22px)">
+          <img src="photos/gecko3-c.jpg" alt="La longue queue annelée du gecko né le 18 septembre 2026" width="960" height="1200" loading="lazy" decoding="async">
+        </picture>
       </div>
     </article>
   </div>
@@ -740,7 +431,7 @@ a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-
     <p class="surtitre">Vos</p>
     <h2 class="titre-2 or">Questions</h2>
     <div class="filet"><span></span></div>
-    <p class="lisible" style="color:var(--gris)">Celles qui reviennent le plus souvent. Si la vôtre n'y est pas, écrivez-moi.</p>
+    <p class="lisible" style="color:var(--gris)">Celles qui reviennent le plus souvent. Si la vôtre n'y est pas, <a class="lien" href="#contact" data-wa>écrivez-moi</a>.</p>
 
     <div class="faq">
       <details>
@@ -806,59 +497,70 @@ a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-
     <div class="filet"><span></span></div>
     <p class="lisible" style="color:var(--gris)">Remplissez ce formulaire et votre demande m'arrive directement sur WhatsApp, avec tout ce dont j'ai besoin pour vous répondre précisément. Aucune donnée n'est enregistrée sur ce site.</p>
 
-    <form class="form" id="reservation">
+    <form class="form" id="reservation" novalidate>
       <div class="deux">
         <div class="champ">
           <label for="r-nom">Votre nom</label>
-          <input id="r-nom" name="nom" type="text" required autocomplete="name">
+          <input id="r-nom" name="nom" type="text" required maxlength="60" autocomplete="name" aria-describedby="e-nom">
+          <p class="erreur" id="e-nom" hidden></p>
         </div>
         <div class="champ">
-          <label for="r-lieu">Votre région</label>
-          <input id="r-lieu" name="lieu" type="text" placeholder="Bulle, Lausanne…" autocomplete="address-level2">
+          <label for="r-lieu">Votre région <small>(facultatif)</small></label>
+          <input id="r-lieu" name="lieu" type="text" maxlength="60" placeholder="Bulle, Lausanne…" autocomplete="address-level2">
         </div>
       </div>
 
       <div class="champ">
         <label for="r-gecko">Quel gecko vous intéresse</label>
-        <select id="r-gecko" name="gecko" required>
+        <select id="r-gecko" name="gecko" required aria-describedby="e-gecko">
           <option value="">Choisissez…</option>
           <option>Né le 16 juin 2026 — 100 CHF</option>
           <option>Né le 1er août 2026 — 140 CHF</option>
           <option>Né le 18 septembre 2026 — 120 CHF</option>
           <option>Je ne sais pas encore, j'aimerais un conseil</option>
         </select>
+        <p class="erreur" id="e-gecko" hidden></p>
       </div>
 
       <div class="deux">
         <div class="champ">
           <label for="r-experience">Votre expérience</label>
-          <select id="r-experience" name="experience" required>
+          <select id="r-experience" name="experience" required aria-describedby="e-experience">
             <option value="">Choisissez…</option>
             <option>Ce serait mon premier reptile</option>
             <option>J'ai déjà eu d'autres reptiles</option>
             <option>J'ai déjà un ou plusieurs geckos léopards</option>
           </select>
+          <p class="erreur" id="e-experience" hidden></p>
         </div>
         <div class="champ">
           <label for="r-installation">Votre installation</label>
-          <select id="r-installation" name="installation" required>
+          <select id="r-installation" name="installation" required aria-describedby="e-installation">
             <option value="">Choisissez…</option>
             <option>Terrarium prêt, chauffage et thermostat installés</option>
             <option>Terrarium acheté, installation en cours</option>
             <option>Pas encore de matériel, je me renseigne</option>
           </select>
+          <p class="erreur" id="e-installation" hidden></p>
         </div>
       </div>
 
       <div class="champ">
-        <label for="r-mot">Dites-moi quelques mots sur vous</label>
-        <textarea id="r-mot" name="motivation" placeholder="Pourquoi un gecko léopard, qui s'en occupera, vos questions…"></textarea>
-        <p class="aide">Ce n'est pas un examen : j'aime simplement savoir où partent mes animaux.</p>
+        <label for="r-mot">Dites-moi quelques mots sur vous <small>(facultatif)</small></label>
+        <textarea id="r-mot" name="motivation" maxlength="700" placeholder="Pourquoi un gecko léopard, qui s'en occupera, vos questions…" aria-describedby="a-mot"></textarea>
+        <p class="aide" id="a-mot">Ce n'est pas un examen : j'aime simplement savoir où partent mes animaux.</p>
+      </div>
+
+      <div class="pot" aria-hidden="true">
+        <label for="r-site">Laissez ce champ vide</label>
+        <input id="r-site" name="site" type="text" tabindex="-1" autocomplete="off">
       </div>
 
       <button type="submit">Envoyer ma demande sur WhatsApp</button>
-      <p class="note">WhatsApp s'ouvrira avec votre message déjà rédigé. Vous le relisez, puis vous l'envoyez.</p>
+      <p class="form__suite" id="form-suite" hidden>WhatsApp ne s'est pas ouvert ? <a class="lien" href="#reserver">Ouvrir ma demande dans WhatsApp</a></p>
+      <p class="note">WhatsApp s'ouvrira avec votre message déjà rédigé. Vous le relisez, puis vous l'envoyez. Rien n'est enregistré sur ce site, <a href="confidentialite.html">voir la politique de confidentialité</a>.</p>
     </form>
+    <noscript><p class="encadre">Ce formulaire a besoin de JavaScript pour préparer votre message. Activez-le dans votre navigateur, puis rechargez la page.</p></noscript>
   </div>
 </section>
 
@@ -869,8 +571,9 @@ a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-
     <div class="filet filet--court"><span></span></div>
     <p>Je réponds aux questions avant, pendant et après l'adoption, et je préfère largement que vous passiez voir les animaux avant de vous décider. Remise en main propre à Bulle uniquement, jamais d'envoi postal.</p>
     <div class="actions">
-      <a class="bouton" href="https://wa.me/41797235033">WhatsApp · 079 723 50 33</a>
+      <a class="bouton" href="#reserver">Réserver un gecko</a>
     </div>
+    <p class="apres-action">Une simple question ? <a class="lien" href="#reserver" data-wa>Écrivez-moi sur WhatsApp</a><span data-tel=" au "></span></p>
     <p class="devise" style="margin-top:2.6rem">Passion · Qualité · Bien-être</p>
   </div>
 </section>
@@ -878,39 +581,15 @@ a:focus-visible,.bouton:focus-visible{outline:2px solid var(--or-clair);outline-
 </main>
 
 <footer>
-  <div class="wrap">Company Gecko Suisse · Bulle, canton de Fribourg · Eublepharis macularius</div>
+  <div class="wrap">
+    <p>Company Gecko Suisse · Bulle, canton de Fribourg · Eublepharis macularius</p>
+    <div class="pied__liens">
+      <a href="confidentialite.html">Confidentialité</a>
+      <a href="conditions.html">Conditions générales</a>
+      <button type="button" data-mesure-lien data-mesure-ouvrir hidden>Mesure d'audience</button>
+    </div>
+  </div>
 </footer>
 
-
-<script>
-(function(){
-  var f = document.getElementById('reservation');
-  if(!f) return;
-
-  Array.prototype.forEach.call(document.querySelectorAll('.reserver-ce'), function(a){
-    a.addEventListener('click', function(){
-      var sel = document.getElementById('r-gecko'), cible = a.getAttribute('data-gecko');
-      Array.prototype.forEach.call(sel.options, function(o){ if(o.value === cible) sel.value = cible; });
-      setTimeout(function(){ var n = document.getElementById('r-nom'); if(n) n.focus({preventScroll:true}); }, 500);
-    });
-  });
-  f.addEventListener('submit', function(e){
-    e.preventDefault();
-    var v = function(n){ var el = f.elements[n]; return el && el.value ? el.value.trim() : ''; };
-    var l = [];
-    l.push('Bonjour, je vous écris depuis votre site pour une demande de réservation.');
-    l.push('');
-    l.push('Nom : ' + v('nom'));
-    if(v('lieu')) l.push('Région : ' + v('lieu'));
-    l.push('Gecko souhaité : ' + v('gecko'));
-    l.push('Expérience : ' + v('experience'));
-    l.push('Installation : ' + v('installation'));
-    if(v('motivation')){ l.push(''); l.push('Quelques mots : ' + v('motivation')); }
-    l.push('');
-    l.push('Merci d\'avance pour votre retour.');
-    window.open('https://wa.me/41797235033?text=' + encodeURIComponent(l.join('\n')), '_blank', 'noopener');
-  });
-})();
-</script>
 </body>
 </html>
